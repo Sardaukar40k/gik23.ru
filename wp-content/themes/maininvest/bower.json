@@ -4,8 +4,6 @@
   "dependencies": {
     "bootstrap": "~3.3.5",
     "font-awesome": "~4.4.0",
-    "owl-carousel": "~1.3.2",
-    "tooltip": "*",
-    "normalize-css": "normalize.css#~3.0.3"
+    "owl-carousel": "~1.3.2"
   }
 }
