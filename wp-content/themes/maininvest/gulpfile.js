@@ -30,16 +30,6 @@ gulp.task('scripts', function () {
 });
 /* --- /Сборка файла main.js --- */
 
-/* --- Оптимизация изображений --- */
-gulp.task('images', function () {
-  gulp.src('src/img/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./img/'))
-});
-/* --- /Оптимизация изображений --- */
-
-
-
 /* ----- Подпроекты ----- */
 
 /* - Старокубанский sass - */
