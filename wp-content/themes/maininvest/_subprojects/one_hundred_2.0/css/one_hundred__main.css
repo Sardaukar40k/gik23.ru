@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/* ----- CSS reset ----- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ----- Bootstrap 3 reset ----- */
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11 .col-md-12, .container, .row, .container-fluid {
+  padding: 0;
+  margin: 0; }
+
+/* ----- Variables ----- */
+/* ----- Main styles ----- */
+body {
+  font-family: "Adelle Cyrillic"; }
+
+.main-content-wrapper {
+  background: url("../../img/main-bg-img.jpg") center bottom no-repeat;
+  background-size: cover;
+  padding-bottom: 28.78571428571429em; }
+
+.logo img {
+  width: 55%; }
+
+.main-header {
+  text-align: center;
+  font-weight: bold; }
+  .main-header h1 {
+    margin: 1.65em auto 16px;
+    font-size: 2.357142857142857em; }
+  .main-header h2 {
+    color: #a80007;
+    font-size: 3.285714285714286em; }
+
+.fz-214 {
+  padding: 7.5em 0 0 4.14286em; }
+
+.main-form {
+  text-align: center;
+  margin: 53px auto 15px;
+  text-transform: none !important; }
+  .main-form .field-wrap {
+    margin-bottom: 0; }
+  .main-form form input, .main-form form #ninja_forms_field_48 {
+    width: 50%;
+    height: 55px;
+    border: 2px solid #bb0007;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.642857142857143em;
+    box-shadow: 0 0 4px 4px #dddddd inset;
+    font-weight: 400;
+    padding: 0.8em 0 0.4em; }
+  .main-form form input[type="submit"] {
+    background: #e70710 url("../../img/button-bg.png") center center no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 4px #b7b4b3;
+    border-bottom: 6px solid #961e23;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 15px auto 38px;
+    font-weight: bold;
+    -webkit-transition: 0.1s 0.1s ease-in-out;
+    transition: 0.1s 0.1s ease-in-out;
+    padding: 0.4em 0 0.5em; }
+    .main-form form input[type="submit"]:hover {
+      padding-top: .6em;
+      border-bottom: 2px solid #961e23;
+      background-position: 60%; }
+    .main-form form input[type="submit"]:active {
+      outline: none;
+      border: 2px solid #961e23; }
+
+.sber-ipoteka {
+  padding-top: 7.5em; }
+  .sber-ipoteka p {
+    font-family: 'Arail Narrow';
+    font-size: .6em;
+    margin-bottom: 2px; }
+  .sber-ipoteka .sber-img {
+    width: 50%; }
+  .sber-ipoteka .sber-img--2 {
+    margin-top: 19px;
+    margin-left: 1em;
+    width: 30%; }
+
+.main-text {
+  font-family: 'Helvetica Neue Cyr';
+  font-weight: 500;
+  font-size: .9em;
+  padding: 0 3.14286em 0 5px; }
+  .main-text p {
+    margin-bottom: .7em; }
+
+.phone-block {
+  background: #ecca74;
+  margin-top: 1.7em;
+  padding: .3em;
+  font-size: 2.357142857142857em; }
+  .phone-block p {
+    /*margin: 1.65em 0 0 auto;*/
+    color: #2d2d2d;
+    /*#a80007;*/
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-weight: bold; }
+
+.ninja-forms-field-error {
+  padding: 10px 0 15px !important; }
+
+.ninja-forms-success-msg {
+  font-size: 3.3em;
+  margin: 0 auto;
+  padding: 0 0 35px;
+  color: #a80007; }
+
+/* ----- Медиазапросы ----- */
+@media (max-width: 960px) {
+  .main-content-wrapper {
+    padding-bottom: 140px; }
+  .logo {
+    width: 50%; }
+  .fz-214 {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0; }
+  .main-form {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .main-text {
+    color: #434343;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 0 20px 0 15px; }
+  .sber-ipoteka {
+    padding-top: 20px; }
+    .sber-ipoteka p {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 20px;
+      padding: 0 15px; }
+      .sber-ipoteka p:last-child {
+        font-weight: bold;
+        text-align: center; }
+    .sber-ipoteka .sber-ipoteka__offer {
+      margin-top: 40px; }
+    .sber-ipoteka .sber-img {
+      width: 40%;
+      margin: 0 40px 0 auto; }
+    .sber-ipoteka .sber-img--2 {
+      margin: 15px auto 0;
+      width: 20%; }
+  .family {
+    margin-top: 20px; }
+    .family .col-md-12 {
+      padding: 0; }
+    .family img {
+      width: 100%; } }
+
+@media (max-width: 728px) {
+  .main-content-wrapper {
+    padding-bottom: 0; }
+  .phone {
+    margin: 0.7em 25px 0; } }
+
+@media (max-width: 480px) {
+  .main-content-wrapper {
+    padding-bottom: 0; }
+  .main-header {
+    margin: 0 auto;
+    padding: 0 15px; }
+    .main-header h1 {
+      margin: 1.65em auto 16px;
+      font-size: 1.6em;
+      text-align: center;
+      margin: 1.5em auto 1em; }
+    .main-header h2 {
+      color: #a80007;
+      font-size: 2.285714285714286em;
+      padding: 0 15px;
+      text-align: center;
+      margin: 0 auto; }
+  .fz-214 {
+    padding: 20px 15px 0;
+    text-align: center; }
+  .main-form {
+    margin-bottom: 1em; }
+    .main-form form input, .main-form form #ninja_forms_field_48, .main-form form #ninja_forms_field_49 {
+      width: 80%;
+      font-size: 1.2em; }
+    .main-form form input[type="submit"] {
+      font-size: 1.2em;
+      padding: .2em 0 0; }
+  .main-text {
+    padding: 0 15px; }
+  .sber-ipoteka {
+    text-align: center;
+    padding-top: 2em; }
+    .sber-ipoteka img {
+      display: block;
+      margin: 0 auto 2em;
+      width: 100%; }
+    .sber-ipoteka .sber-img {
+      width: 70%; }
+    .sber-ipoteka .sber-img--2 {
+      margin: 15px auto 2em;
+      width: 40%; }
+  .sber-ipoteka__offer {
+    background: rgba(255, 255, 255, 0.4);
+    font-size: 20px;
+    text-align: left;
+    padding: 5px 15px;
+    margin: 0 auto; }
+  .family {
+    background: rgba(255, 255, 255, 0.4);
+    padding-top: 20px;
+    margin-top: 0; }
+    .family .col-md-12 {
+      padding: 0; }
+    .family img {
+      width: 100%; } }

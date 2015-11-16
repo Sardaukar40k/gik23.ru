@@ -1,0 +1,19 @@
+.pluso {
+  margin-top: 20px;
+  float: right;
+  width: 20%;
+  @media (max-width: $content-width) {
+    float: none !important;
+    width: 100% !important;
+    text-align: left;
+  }
+  &-010011000101-06 {
+    text-align: right;
+    @media (max-width: $content-width) {
+      text-align: left;
+    }
+  }
+  &-more {
+    display: none !important;
+  }
+}

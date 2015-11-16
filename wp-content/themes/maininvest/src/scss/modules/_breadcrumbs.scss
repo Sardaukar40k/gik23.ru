@@ -1,0 +1,29 @@
+/* -------- Breadcrumbs style ------ */
+.breadcrumbs {
+  margin: 20px 0;
+  font-size: 11px;
+  .divider {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: $breadcrumbs-color;
+    margin: 0 5px;
+  }
+  a {
+    color: $breadcrumbs-color;
+    text-decoration: underline;
+    padding: 0;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @media(max-width: $content-width) {
+    font-size: 13px;
+    padding: 0 20px;
+  }
+  &-block {
+    padding: 0;
+  }
+}
+.current {
+  color: $breadcrumbs-color;
+  text-decoration: none;
+}

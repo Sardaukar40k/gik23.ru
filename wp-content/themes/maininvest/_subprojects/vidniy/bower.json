@@ -1,0 +1,26 @@
+{
+  "name": "vidniy",
+  "version": "0.0.0",
+  "authors": [
+    "Alexey Maevskiy <mr.overlord2012@gmail.com>"
+  ],
+  "description": "Страница ЖК Видный",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "owl-carousel": "~1.3.2",
+    "animate.css": "~3.4.0",
+    "jQuery-viewport-checker": "~1.8.5"
+  }
+}

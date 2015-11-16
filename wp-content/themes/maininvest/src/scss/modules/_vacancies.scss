@@ -1,0 +1,86 @@
+/* ----- start: Вакансии - архив ----- */
+.vacancies {
+  &__headers {
+    @include headers--big('img/vacancies/main-header-bg.jpg');
+  }
+  &__content {
+    padding: 0;
+    @media (max-width: $content-width) {
+      padding: 0 15px;
+    }
+  }
+  &__post {
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
+    margin: 30px auto 30px;
+    &:last-child {
+      border-bottom: none;
+    }
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0;
+      margin: 0 auto 15px;
+      top: 0;
+      &:after {
+        content: '?';
+        font-size: 18px;
+        font-family: $main-font;
+        margin-left: 4px;
+
+      }
+      a {
+        color: #000;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__content {
+      &__price {
+        color: #930a0a;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 16px;
+        margin: 15px auto 20px;
+      }
+    }
+  }
+}
+/* ----- end: Вакансии - архив ----- */
+
+/* ----- start: Вакансии - запись ----- */
+.single-vacancies {
+  &__content {
+    @extend .vacancies__post;
+    margin-top: 0;
+    h1 {
+      &:after {
+        display: none;
+      }
+    }
+    &__item {
+      h2 {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+    }
+    &__salary {
+      @extend .vacancies__post__content__price;
+      margin-top: 32px;
+    }
+  }
+  &__contacts {
+    margin-top: 30px;
+    p {
+      margin: 25px auto;
+      text-align: left;
+      strong {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+/* ----- end: Вакансии - запись ----- */

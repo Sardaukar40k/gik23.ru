@@ -1,0 +1,103 @@
+.main-header {
+  background: url("../img/header-bg.png") center center no-repeat;
+  background-size: cover;
+}
+.logo {
+  width: (650/2000)*100%;
+  position: relative;
+  z-index: 1;
+  float: left;
+  background: #111;
+  text-align: right;
+  padding: 31px 0 25px 0;
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 114px solid #111;
+    position: absolute;
+    right: -140px;
+    top: 0;
+    z-index: 1;
+  }
+  &:before {
+    content: '';
+    display: block;
+    background: url("../img/header-tiangle.png");
+    width: 135px;
+    height: 104px;
+    right: -137px;
+    bottom: 7px;
+    z-index: -1;
+    position: absolute;
+  }
+  @media all and (max-width: $content-width) {
+    width: 30%;
+  }
+}
+.slogan {
+  width: (1167/2000)*100%;
+  background-color: rgb(255, 203, 60);
+  -webkit-background-size: cover;
+  background-size: cover;
+  float: right;
+  padding: 15px 12% 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0 solid transparent;
+    border-left: 85px solid transparent;
+    border-bottom: 160px solid #ffcb3c;
+    border-right: 12px solid #ffcb3c;
+    position: absolute;
+    bottom: 0;
+    left: -62px;
+    z-index: -1;
+  }
+  h1 {
+    font-size: (20/16)*100%;
+    width: 50%;
+    float: left;
+    color: #000;
+    @media all and (max-width: $content-width/2) {
+      font-size: .7em;
+    }
+  }
+  .phone {
+    width: 50%;
+    float: left;
+    text-align: left;
+    p {
+      margin-bottom: 10px;
+      text-align: left;
+      font-size: (20/16) * 100%;
+    }
+    a {
+      @extend %main-button;
+      font-size: .7em;
+      display: inline-block;
+      padding: 8px 25px;
+      height: 35px;
+      &:hover {
+        text-decoration: none;
+        padding-top: 11px;
+      }
+    }
+  }
+  @media all and (max-width: $content-width) {
+    width: 50%;
+    padding: 15px 0;
+  }
+  @media all and (max-width: $content-width/2) {
+    width: 40%;
+  }
+
+}

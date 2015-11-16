@@ -1,0 +1,27 @@
+%reasons-item {
+  width: 20%;
+  float: left;
+  @media screen and (max-width: $content-width) {
+  }
+  @media screen and (max-width: $content-width/2) {
+    width: 100%;
+    margin: 20px auto;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 13px;
+  }
+  p {
+    margin: 0 auto;
+    width: 95%;
+    font-weight: 500;
+  }
+}
+
+%gis-map {
+  iframe {
+    width: 100%;
+    margin-bottom: -10px;
+  }
+}

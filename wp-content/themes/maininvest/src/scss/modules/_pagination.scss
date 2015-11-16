@@ -1,0 +1,21 @@
+#wp_page_numbers {
+  text-align: center;
+  margin-left: 0;
+  ul {
+    list-style: none;
+    li {
+      margin-right: 13px;
+      padding: 4px 3px;
+      display: inline;
+      a {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        color: #898989;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

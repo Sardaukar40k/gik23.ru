@@ -1,0 +1,362 @@
+.main-form {
+  position: relative;
+  padding: 15px 0 0 0;
+  border: 1px solid #bfbfbf;
+  margin: 20px auto 0;
+  @include background-image($main-form-bg);
+  background-repeat: repeat;
+  text-align: center;
+  &:after {
+    @include block-shadow(44px);
+    opacity: .7;
+  }
+  h2 {
+    font-size: 22px !important;
+    font-weight: 500;
+    padding: 10px 0 0 0;
+    margin: 0 auto 15px 0;
+    text-align: center !important;
+  }
+  p {
+    text-align: center !important;
+  }
+  input {
+    position: relative;
+    float: left;
+    display: block;
+    width: 38%;
+    margin: 0 10px 0 17%;
+    padding-left: 30px;
+    font-size: 16px;
+    height: 41px;
+    background: #fff;
+    border: 1px solid #4d4d4d;
+    box-shadow: 0 0 3px 3px #dddddd inset;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    &:focus {
+      outline: none;
+    }
+    &.name {
+      background: #fff url('img/name-icon.png') 3% 45% no-repeat;
+    }
+    /* --- media $content-width --- */
+    @media(max-width: $content-width) {
+      float: none;
+      width: 60%;
+      margin: 10px auto;
+    }
+    @media (max-width: 480px) { /* input - 480px */
+      width: 80%;
+      float: none;
+      margin: 15px auto;
+    }
+  }
+  input[type="submit"] {
+    float: left;
+    width: 24.21%;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    color: #fff;
+    height: 41px;
+    @include background-image('img/button-bg.png');
+    background-color: $main-buttons-color;
+    box-shadow: 0 0 0 3px rgba(0,0,0,.15);
+    border: none;
+    border-bottom: 4px solid #972428;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: .1s .1s ease-in-out;
+    -o-transition: .1s .1s ease-in-out;
+    transition: .1s .1s ease-in-out;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      border-bottom: 2px solid #961e23;
+      background-position: 45%;
+    }
+    &:active {
+      outline: none;
+      border: 2px solid #961e23;
+    }
+    @media(max-width: $content-width) {
+      float: none;
+      width: 60%;
+      margin: 10px auto;
+    }
+    @media (max-width: 480px) { /* submit - 480px */
+      width: 80%;
+      float: none;
+      margin: 15px auto 0;
+    }
+  }
+  @media(max-width: 480px) { /* form - 480px */
+    float: none;
+    margin-bottom: 40px;
+    padding: 10px 0;
+  }
+}
+.form-desc {
+  font-size: 0.85em;
+  clear: both;
+  margin: 40px auto 15px;
+  @media (max-width: $content-width){
+    margin-top: 0;
+  }
+  @media (max-width: $content-width/2){
+    margin-top: 10px;
+  }
+}
+.popup-form {
+  position: relative;
+  @extend .main-form;
+  width: 317px;
+  margin-top: 10%;
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 6px;
+    opacity: 1;
+    font-weight: normal;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    margin: -1px -1px auto auto;
+    &:hover {
+      opacity: 1;
+      color: #d3d3d3;
+    }
+  }
+  form {
+    input, input[type="submit"] {
+      float: none;
+      margin: 16px auto 0;
+      width: 80%;
+    }
+    p {
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .wpcf7-not-valid-tip {
+      margin: 0 auto;
+      left: 50%;
+      margin-left: -38%;
+    }
+  }
+  p:last-child {
+    padding: 0 50px;
+    margin-top: 0;
+    @media (max-width: 480px) {
+      padding: 0 15px;
+    }
+  }
+  &:after {
+    display: none;
+  }
+  @media (max-width: $content-width) {
+    width: 60%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media (max-width: 480px) {
+    width: 80%;
+    margin-top: 25%;
+  }
+}
+.wpcf7 {
+  &-form-control-wrap {
+    display: block;
+    width: 100%;
+  }
+  &-validation-errors {
+    display: none !important;
+  }
+  &-mail-sent-ng {
+    background-color: #ff0000;
+    color: #fff;
+    margin: 20px auto !important;
+    width: 94%;
+  }
+  &-not-valid-tip {
+    font-size: 11px !important;
+    position: absolute;
+    margin-left: 17%;
+    top: -18px;
+    background-color: #c50000;
+    color: #fff !important;
+    padding: 2px 5px;
+  }
+}
+.single-news {
+  .wpcf7 {
+    &:before {
+      content: 'Остались вопросы - задайте их менеджеру';
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    padding: 20px 5px;
+    position: relative;
+    border: 1px solid #bfbfbf;
+    margin: 35px auto 0;
+    background: #f4d593 url($main-form-bg) repeat;
+    &:after {
+      @include block-shadow(44px);
+      opacity: .4;
+      bottom: -42px;
+      background-size: contain;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      padding: 0;
+      margin: 0 auto 25px 0;
+    }
+    @media (max-width: 725px) {
+      &:after {
+        bottom: -51px ;
+        opacity: .4;
+      }
+    }
+    p.last {
+      clear: both;
+      text-align: center;
+      color: #000;
+      font-size: 0.85em;
+      padding: 20px 0 0 0;
+      margin-bottom: 0;
+      strong {
+        font-size: 12px;
+        color: #736649;
+      }
+      img {
+        margin-bottom: 16px;
+      }
+    }
+    input {
+      position: relative;
+      float: left;
+      display: block;
+      width: 38%; // (310/820)*100%
+      margin: 0 10px 0 17%;
+      padding-left: 30px;
+      font-size: 16px;
+      height: 41px;
+      background: #fff;
+      border: 1px solid #4d4d4d;
+      box-shadow: 0 0 3px 3px #dddddd inset;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      &:focus {
+        outline: none;
+      }
+      &.name {
+        background: #fff url('img/name-icon.png') 3% 45% no-repeat;
+      }
+      @media (max-width: $content-width) {
+        height: 42px;
+        float: none;
+        width: 45%;
+        margin: 10px auto;
+      } /* input @media */
+    }
+    input[type="submit"] {
+      float: left;
+      width: 24.21%;
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      padding: 0;
+      color: #fff;
+      height: 41px;
+      background: #e70710 url('img/button-bg.png') center center no-repeat;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
+      border: none;
+      border-bottom: 4px solid #972428;
+      -webkit-background-size: cover;
+      background-size: cover;
+      -webkit-transition: .1s .1s ease-in-out;
+      -o-transition: .1s .1s ease-in-out;
+      transition: .1s .1s ease-in-out;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        border-bottom: 2px solid #961e23;
+        background-position: 45%;
+      }
+      &:active {
+        outline: none;
+        border: 2px solid #961e23;
+      }
+      @media (max-width: $content-width) {
+        float: none;
+        width: 33%;
+        margin: 10px auto;
+      } /* input[type="submit"] @media */
+    }
+    &-form-control-wrap {
+      display: block;
+      width: 100%;
+    }
+    &-validation-errors {
+      display: none !important;
+    }
+    &-mail-sent-ng {
+      background-color: #ff0000;
+      color: #fff;
+      margin: 20px auto !important;
+      width: 94%;
+    }
+    &-not-valid-tip {
+      position: absolute;
+      margin-left: 17%;
+      top: -20px;
+      background-color: #c50000;
+      color: #fff !important;
+      padding: 2px 5px;
+    }
+  }
+}
+.form {
+  &_top_front-page {
+    width: 85%;
+    margin-top: -30px;
+  }
+  &_bottom {
+    width: 85%;
+    margin-bottom: -30px;
+    @media screen and (max-width: $content-width) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  &_middle {
+    width: 85%;
+    margin: 40px auto;
+    background: url('img/main-faq/pattern_form.png') left top repeat;
+  }
+}

@@ -1,0 +1,53 @@
+/*--------- Стили страницы по-умолчанию ---------*/
+.page {
+  padding-bottom: 55px;
+  &--empty {
+    &__head {
+      margin-top: 0;
+      padding: 0 15px;
+    }
+  }
+  h1 {
+    font-size: 22px;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0;
+    top: -40px;
+    margin-bottom: 0;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2 {
+    text-align: left;
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  p {
+    text-align: left;
+    font-size: 14px;
+  }
+  ul {
+    text-align: left;
+  }
+  &-logo {
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  &-content {
+    margin-top: 0;
+    border-top: 2px dotted #000;
+    padding: 0;
+    text-align: center;
+  }
+}
+/*--------- /Стили страницы по-умолчанию ---------*/

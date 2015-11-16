@@ -1,0 +1,336 @@
+/* ----- »поетка ----- */
+.ipoteka {
+  padding-bottom: 0;
+  &__headers {
+    @include headers--big("img/ipoteka/ipoteka__header-bg.jpg");
+    h1 {
+      line-height: 1.3;
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 16px;
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
+    }
+  }
+  &__action--top {
+    border: 2px solid #dddddd !important;
+    margin-top: 62px;
+    padding: 54px 0 36px;
+    @media (max-width: 960) {
+      padding: 54px 15px 36px;
+    }
+    @media (max-width: 480px) {
+      padding: 15px;
+    }
+    img {
+      float: left;
+      margin-left: -60px;
+      width: 50%;
+      @media (max-width: $content-width) {
+        display: block;
+        float: none;
+        margin: 10px auto;
+      }
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+    &__offer {
+      background: #ed1c24;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+      color: #fff;
+      float: left;
+      font-family: 'Bebas Neue';
+      font-size: 32px !important;
+      font-weight: bold;
+      line-height: 1 !important;
+      padding: 15px;
+      position: relative;
+      text-transform: uppercase;
+      width: 60%;
+      margin-left: 10px;
+      &:before {
+        content: '';
+        display: block;
+        background: url("img/ipoteka/ipoteka__action-top__triangle.png") center center no-repeat;
+        height: 24px;
+        position: absolute;
+        width: 19px;
+        left: -17px;
+        top: 32px;
+      }
+      span {
+        font-size: 28px;
+      }
+      @media (max-width: $content-width) {
+        float: none;
+        margin: 10px auto 25px;
+      }
+      @media (max-width: 480px) {
+        float: none;
+        margin: 10px auto;
+      }
+    }
+    &__offer-description {
+      p {
+        font-size: 21px !important;
+        font-family: 'Bebas Neue';
+        font-weight: bold;
+        text-transform: uppercase !important;
+        width: 80%;
+        @media (max-width: $content-width) {
+          clear: both;
+          text-align: center;
+          margin: 25px auto 20px;
+        }
+        @media (max-width: 480px) {
+          clear: both;
+          padding: 0 15px;
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+  &__reasons {
+    margin: 56px auto 47px;
+    h2 {
+      clear: both;
+    }
+    &__item {
+      float: left;
+      margin-top: 0;
+      padding: 0 20px;
+      text-align: center;
+      width: 20%;
+      @media (max-width: $content-width) {
+        margin-bottom: 40px;
+      }
+      img {
+        width: auto;
+        height: 130px;
+        @media (max-width: 720px) {
+          height: 100px;
+        }
+        @media (max-width: 480px) {
+          height: 130px;
+        }
+      }
+      figcaption {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 9px;
+        @media (max-width: 480px) {
+          margin: 15px auto 0;
+          width: 70%;
+        }
+      }
+      @media (max-width: 480px) {
+        float: none;
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+    &__conditions {
+      color: #919191;
+      clear: both;
+      font-weight: 500;
+      margin-top: 36px;
+      @media (max-width: $content-width) {
+
+      }
+      p {
+        font-size: 12px;
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+  }
+  &__specialist {
+    border: none;
+    @include background-image("img/ipoteka/ipoteka__specialist__bg.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 46px 0 70px;
+    @media (max-width: 480px) {
+      padding-bottom: 15px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    &__text {
+      h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px auto 20px 0;
+        span {
+          background: #000;
+          color: #fff;
+          font-size: 14px;
+          margin-left: 31px;
+          padding: 8px 9px 5px;
+        }
+        @media (max-width: $content-width) {
+          text-align: center;
+          span {
+            display: block;
+            margin: 5px auto;
+            text-align: center;
+          }
+        }
+        @media (max-width: 480px) {
+          text-align: center;
+          span {
+            display: block;
+            margin: 10px auto 0;
+            text-align: center;
+          }
+        }
+      }
+      a {
+        @include main-button;
+        padding: 9px 15px 8px;
+        display: block;
+        color: #fff;
+        height: 40px;
+        margin-top: 25px;
+        width: 30%;
+        text-align: center;
+        &:hover, &:link, &:focus, &:active {
+          padding-top: 10px;
+          text-decoration: none;
+        }
+        &:focus, &:active {
+          background-position: 45%;
+        }
+      }
+    }
+  }
+  &__review {
+    &__single-review {
+      @extend .single-comment;
+      .comment-text {
+        min-height: 240px;
+      }
+    }
+  }
+  &__warrenty {
+    h2 {
+      text-align: center;
+      @media (max-width: 480px) {
+        font-size: 15px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    &__item {
+      text-align: center;
+      img {
+        margin-bottom: 20px;
+        width: 25%;
+      }
+      p {
+        font-size: 14px;
+        margin: 10px auto 25px;
+        text-align: center !important;
+        width: 60%;
+      }
+    }
+  }
+  &__action {
+    border: none;
+    @include background-image("img/ipoteka/ipoteka__action__bg.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 38px 0;
+    &__content {
+      background: rgba(255, 255, 255, .8);
+      font-family: 'Bebas Neue';
+      padding: 32px 30px 26px;
+      h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 auto 20px;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+          font-size: 40px;
+          color: #c60008;
+        }
+      }
+      form {
+        width: 60%;
+        margin: 0 auto;
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+        input {
+          height: 46px;
+          float: left;
+          margin-right: 10px;
+          padding-left: 16px;
+          width: 60%;
+          @media (max-width: 480px) {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            width: 70%;
+          }
+        }
+        input[type="submit"] {
+          background: $main-buttons-color url('img/button-bg.png') center center no-repeat;
+          background-size: cover;
+          border: none;
+          color: #fff;
+          font-size: 23px;
+          font-weight: bold;
+          margin-right: 0;
+          padding: 0;
+          width: 30%;
+          -webkit-transition: .2s ease-in-out;
+          -moz-transition: .2s ease-in-out;
+          -ms-transition: .2s ease-in-out;
+          -o-transition: .2s ease-in-out;
+          transition: .2s ease-in-out;
+          &:hover {
+            background-color: lighten( $main-buttons-color  , 15% );
+            background-position: 47%;
+          }
+          @media (max-width: 480px) {
+            display: block;
+            float: none;
+            margin: 20px auto 0;
+            width: 70%;
+          }
+        }
+      }
+      &__description {
+        clear: both;
+        font-size: 19px;
+        margin: 40px auto 0;
+        text-align: center !important;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+          margin-top: 20px;
+        }
+      }
+    }
+    .wpcf7-not-valid-tip {
+      margin-left: 0;
+    }
+  }
+  &__map {
+    padding: 0;
+    iframe {
+      width: 100%;
+      margin-bottom: -10px;
+    }
+  }
+  &__map__header {
+    margin-bottom: -10px;
+  }
+}
+/* --- /»потека -----*/

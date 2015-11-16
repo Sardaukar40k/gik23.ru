@@ -1,0 +1,32 @@
+.autorization-form_modal {
+  @extend .registration-form_modal;
+  .modal-content {
+    form {
+      input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+      }
+      .login-submit {
+        text-align: center;
+        input[type='submit'] {
+          @include main-button;
+          color: #fff;
+          height: 41px;
+          margin: 20px auto 0;
+          display: block;
+          width: 70%;
+          padding: 8px 0;
+          &:hover {
+            padding: 11px 0;
+          }
+          @media screen and (max-width: $content-width/2) {
+            width: 80%;
+          }
+        }
+      }
+
+    }
+  }
+}

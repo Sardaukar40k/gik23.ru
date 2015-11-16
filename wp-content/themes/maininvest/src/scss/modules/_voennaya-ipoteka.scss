@@ -1,0 +1,67 @@
+.voennaya {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  &__headers {
+    @include headers--big("img/voennaya/voennaya-bg.jpg");
+  }
+  &-reasons {
+    margin: 0 -15px 30px;
+    padding: 0 15px;
+    &-item {
+      @extend %reasons-item;
+      p {
+        text-align: center;
+        font-size: 13px;
+      }
+      img {
+        min-height: 137px;
+      }
+    }
+  }
+  &-why {
+    &-item {
+      @extend %reasons-item ;
+      margin: 0 3% 10px auto;
+      @media screen and (max-width: $content-width/2) {
+        margin: 20px auto;
+      }
+      p {
+        text-align: center;
+        font-size: 13px;
+      }
+      img {
+        min-height: 137px;
+      }
+      &_margin-left {
+        margin-left: 20%;
+        @media screen and (max-width: $content-width) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  &-reviews {
+    &-single {
+      @extend .ipoteka__review__single-review;
+      .divider {
+        height: 1px;
+        background: #dbdbdb;
+        width: 50%;
+        margin: 10px auto 10px 0;
+      }
+      .comment-text {
+        min-height: 180px;
+      }
+    }
+  }
+  &-map {
+    margin-bottom: 0;
+    @extend %gis-map;
+    iframe {
+      height: 450px;
+    }
+  }
+  .main-form {
+    width: 85%;
+  }
+}

@@ -1,0 +1,100 @@
+/*--------- Posts styles ---------*/
+.posts {
+  position: relative;
+  h1 {
+    display: inline-block;
+    background: #fff;
+    font-size: 25px;
+    padding: 5px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -2.3em;
+  }
+  .col-md-2 {
+    padding: 0;
+  }
+  padding-bottom: 40px;
+  .single-post {
+    margin-bottom: 40px;
+    margin-top: 24px;
+    img {
+      margin-top: 22px;
+    }
+    .post {
+      padding-left: 0;
+      padding-right: 0;
+      ul {
+        padding-left: 25px;
+      }
+    }
+    h2 {
+      font-size: 20px;
+      a {
+        color: #000;
+      }
+    }
+    .post-more {
+      padding-left: 20px;
+      border-top: 2px solid #f00;
+      a {
+        width: 150px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: block;
+        margin-top: -10px;
+        background: #fff;
+        font-style: italic;
+        font-size: 12px;
+        color: #f00;
+        &::after {
+          content: url(img/posts/read-more.png);
+          padding-left: 2px;
+        }
+      }
+      margin-top: 30px;
+    }
+    time {
+      display: inline-block;
+    }
+  }
+  .posts-page-counter {
+    padding-bottom: 60px;
+    a {
+      display: block;
+      color: $post-info-color;
+    }
+  }
+}
+.postmetadata {
+  a {
+    color: $breadcrumbs-color;
+    text-decoration: underline;
+    font-style: italic;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.post-info {
+  margin-bottom: 25px;
+  color: $post-info-color;
+  .post-comments {
+    margin-left: 20px;
+    img {
+      margin-top: 0;
+      margin-right: 3px;
+      width: 13px;
+      height: auto;
+      @media (max-width: $content-width) {
+        width: auto !important;
+      }
+    }
+  }
+  .post-views {
+    @extend .post-comments;
+    img {
+      width: 15px;
+    }
+  }
+}

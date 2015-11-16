@@ -1,0 +1,36 @@
+.form-tenders {
+  h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  form {
+    .input_file {
+      margin-bottom: 20px;
+    }
+    .input_textfield {
+      border: 1px solid #4d4d4d;
+      margin-bottom: 17px;
+      width: 50%;
+      padding: 15px;
+      @media screen and (max-width: $content-width) {
+        width: 85%;
+        margin: 0 auto 17px;
+      }
+    }
+    .input_submit_main {
+      @include main-button;
+      color: #fff;
+      padding: 10px 20px;
+      width: 170px;
+      height: 41px;
+      display: inline-block;
+      &:hover {
+        padding: 12px 20px 10px;
+      }
+    }
+  }
+  .wpcf7-not-valid-tip {
+    margin-left: 0;
+  }
+}

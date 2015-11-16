@@ -1,0 +1,100 @@
+.objects {
+
+  &_list { // блок с каруселью объектов
+      &-item {
+        box-sizing: border-box;
+        padding: 25px 5px 5px;
+        text-align: center;
+        display: block;
+        transition: .2s ease-in;
+        width: 19.8%;
+        margin: 0 auto 20px;
+        float: left;
+        position: relative;
+        z-index: 0;
+        @media screen and (max-width: $content-width) {
+          width: 33%;
+        }
+        @media screen and (max-width: $content-width/2) {
+          width: 55%;
+          float: none;
+          margin: 25px auto;
+        }
+        &:hover {
+          background: #fff;
+          text-decoration: none;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+          h3 {
+            text-decoration: none;
+          }
+          z-index: 5;
+        }
+
+        &-beneffit {
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 0;
+          right: 0;
+          &-icon {
+            width: 19.9% !important;
+            position: absolute;
+            top: -.4em;
+            left: 5px;
+            z-index: 2;
+          }
+          &-text {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            left: 50%;
+            margin-left: -50%;
+            width: 100%;
+            font-size: 12px !important;
+            font-family: 'Arial Narrow', sans-serif !important;
+            color: #fff !important;
+            padding: 5px 0 5px 27%;
+            text-align: left !important;
+          }
+        }
+
+        img {
+          width: 100%;
+          margin: 0 auto 20px;
+        }
+        h3 {
+          padding: 10px 0 5px;
+          text-decoration: underline;
+          color: #fff;
+          font-weight: normal !important;
+          font-size: 13px !important;
+          background: url(img/objects/object-title.png) center center no-repeat;
+          background-size: 90%;
+        }
+      }
+    &-more-link {
+      @include  main-button;
+      clear: both;
+      height: 35px;
+      color: #fff;
+      padding: 7px 0 5px;
+      width: 20%;
+      display: block;
+      margin: 20px auto 30px;
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        padding: 9px 0 3px;
+      }
+      &:active, &:focus {
+        padding: 8px 0 3px;
+      }
+      @media (max-width: $content-width) {
+        margin-top: 20px;
+      }
+      @media (max-width: 480px) {
+        width: 50%;
+      }
+    }
+  }
+}

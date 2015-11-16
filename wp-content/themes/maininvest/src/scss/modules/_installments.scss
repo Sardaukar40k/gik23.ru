@@ -1,0 +1,203 @@
+/* ----- start: ��������� ----- */
+.installments {
+  @extend .repairs;
+  &__headers {
+    @include headers--big("img/installments/headers-bg.jpg");
+    h2 {
+      max-width: 90%;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      ul {
+        padding-left: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+  &__advantages {
+    margin-top: 0;
+    @extend .repairs__advantages;
+    &__item {
+      @extend .repairs__advantages__item;
+    }
+    a {
+      @include main-button;
+      color: #fff;
+      padding: 9px 10px 8px;
+      height: 41px;
+      margin: 27px auto 0;
+      display: block;
+      width: 20%;
+      &:hover, &:active, &:focus {
+        padding: 12px 10px 5px;
+        text-decoration: none;
+      }
+      @media (max-width: 480px) {
+        width: 50%;
+        font-size: 12px;
+
+      }
+      @media (max-width: 360px) {
+        width: 70%;
+      }
+    }
+  }
+  &__objects {
+    &__item {
+      border-bottom: 1px solid #d7d7d7;
+      border-top: none;
+      padding: 25px 0 36px 15px !important;
+      margin: 0 auto;
+      &:last-child {
+        border-bottom: none;
+      }
+      img {
+        width: 100%;
+        @media (max-width: $content-width) {
+          max-width: 40%;
+        }
+        @media (max-width: 480px) {
+          max-width: 55%;
+        }
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0 auto 0 0;
+        @media (max-width: 480px) {
+          text-align: center;
+          margin: 10px auto;
+        }
+      }
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        @media (max-width: 480px) {
+          text-align: center;
+          margin: 10px auto;
+        }
+      }
+      .col-md-5 {
+        padding: 0 15px;
+      }
+      &__text {
+        margin-bottom: 0;
+        text-align: left;
+        p {
+          font-weight: normal;
+          @media (max-width: 480px) {
+            text-align: left;
+          }
+        }
+        a {
+          text-decoration: underline;
+          color: #0b538a;
+          &:hover {
+            text-decoration: none;
+          }
+          @media (max-width: 480px) {
+            margin: 15px auto;
+            padding: 0 15px;
+          }
+          span {
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+          }
+        }
+      }
+      &__map {
+        padding: 0;
+        @media (max-width: 480px) {
+          padding: 0 15px;
+          margin: 20px auto;
+        }
+        iframe {
+          width: 100%;
+          height: 216px;
+          border: none !important;
+          .leaflet-bottom {
+            display: block !important;
+          }
+        }
+      }
+      &__beneffit {
+        margin-top: -20px;
+        text-align: left;
+        @media (max-width: $content-width) {
+          width: 70%;
+          margin: 10px auto 20px;
+        }
+        img {
+          width: auto;
+          margin: 0 auto -50px 5px;
+          text-align: left;
+        }
+        p {
+          padding: 5px 5px 5px 60px;
+          color: #fff;
+          font-size: 12px;
+          font-family: 'Arial Narrow';
+          @media (max-width: 480px) {
+            padding-left: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  &__how {
+    @extend .repairs__how;
+    &__item {
+      @media (max-width: 380px) {
+        width: 90%;
+      }
+      @extend .repairs__how__item;
+      &__wrap--bottom {
+        @extend .repairs__how__item__wrap--bottom;
+      }
+      &__wrap--top {
+        @extend .repairs__how__item__wrap--top;
+      }
+    }
+    a {
+      @include main-button;
+      color: #fff;
+      padding: 9px 10px 8px;
+      height: 41px;
+      margin: 47px auto;
+      display: block;
+      width: 20%;
+      &:hover, &:active, &:focus {
+        padding: 12px 10px 5px;
+        text-decoration: none;
+      }
+      @media (max-width: 480px) {
+        width: 50%;
+        font-size: 12px;
+      }
+      @media (max-width: 360px) {
+        width: 70%;
+      }
+    }
+    &__clarification {
+      p {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1;
+      }
+      @media (max-width: 480px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__main-form--bottom {
+    @extend .repairs__main-form--bottom;
+    margin-top: 0;
+  }
+  &__map {
+    @extend .repairs__map;
+  }
+}
+/* ----- end: ��������� ----- */

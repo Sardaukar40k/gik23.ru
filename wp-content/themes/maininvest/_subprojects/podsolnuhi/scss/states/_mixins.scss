@@ -1,0 +1,18 @@
+/* ------- mixins ---------- */
+@mixin block-shadow($bottom) {
+    content: '';
+    height: 60px;
+    width: 100%;
+    background: url('../img/shadow-bg.png') no-repeat center center;
+    position: absolute;
+    right: 0;
+    bottom: -$bottom;
+}
+@mixin block-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+@mixin block-reset {
+    margin: 0;
+    padding: 0;
+}

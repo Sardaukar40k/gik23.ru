@@ -1,0 +1,6 @@
+@include sticky-footer(130px);
+#wrapper {
+  @media (max-width: $content-width) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,183 @@
+.tenders {
+  padding-bottom: 50px;
+  &-headers {
+    @include headers--big('img/tenders/tenders-bg.jpg');
+  }
+  h1 {
+    text-align: center;
+    width: 25%;
+    float: none;
+    display: block;
+    margin: 50px auto 0 0;
+    @media screen and (max-width: $content-width) {
+      width: 60%;
+    }
+  }
+  h2 {
+    width: 60%;
+    float: none;
+    display: block;
+    @media screen and (max-width: $content-width) {
+      width: 80%;
+      max-width: 80%;
+    }
+    @media screen and (max-width: $content-width/2) {
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+  &-item {
+    border: none;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 30px;
+    margin: auto -15px 30px;
+    @media screen and (max-width: $content-width) {
+      padding: 0 15px 30px;
+    }
+    &-deadline {
+      color: #930a0a;
+      font-size: 14px;
+      text-align: left;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+    h1 {
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+      padding: 0;
+      margin:  15px auto;
+      top: 0;
+      a {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+        &:link, &:visited, &:hover, &:active {
+          color: #000;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &-adress {
+      font-size: 12px;
+    }
+  }
+}
+
+.tenders-single {
+  &-content {
+    margin-top: 0;
+    border: none;
+    @media screen and (max-width: $content-width) {
+      padding: 0 15px;
+    }
+    &-deadline {
+      @extend .tenders-item-deadline;
+    }
+    h1 {
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+      padding: 0;
+      margin: 15px auto;
+      top: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-adress {
+      font-size: 12px;
+      font-style: italic;
+    }
+    &-subject, &-object, &-info {
+      margin: 45px auto 20px;
+      h2 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0 auto 10px;
+      }
+    }
+    &-object, &-info {
+      margin: 20px auto;
+    }
+    &-info {
+      margin-bottom: 35px;
+    }
+    &-files {
+      margin: 30px auto;
+        border-bottom: 1px solid #d9d9d9;
+        padding-bottom: 35px;
+        h2 {
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0 auto 20px;
+
+        }
+        a {
+          text-decoration: underline;
+          font-size: 12px;
+          color: #000;
+          float: left;
+          width: 24%;
+          margin: 0 1% 0 auto;
+          font-family: Arial, sans-serif;
+          padding: 15px 0 17px 37px;
+          min-height: 70px;
+          &:hover {
+            color: #000;
+            text-decoration: none;
+          }
+          &:before {
+            content: '';
+            display: none;
+          }
+        }
+        a[href$=".docx"] {
+          background: url("img/doc-icon.png") left center no-repeat;
+          -webkit-background-size: contain;
+          background-size: 30px;
+          @media screen and (max-width: $content-width) {
+            width: 100%;
+            margin: 10px auto 20px;
+          }
+        }
+        a[href$=".pdf"] {
+          background: url("img/pdf-icon.png") left center no-repeat;
+          -webkit-background-size: contain;
+          background-size: 28px;
+          @media screen and (max-width: $content-width) {
+            width: 100%;
+            margin: 10px auto 20px;
+          }
+        }
+
+    }
+    &-autorize {
+      margin: 0 auto;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-weight: 600;
+      @media screen and (max-width: $content-width) {
+        padding: 0 15px;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &-info {
+    border: none;
+    margin: 35px auto 0;
+    @media screen and (max-width: $content-width) {
+      padding: 0 15px;
+    }
+  }
+  &-form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

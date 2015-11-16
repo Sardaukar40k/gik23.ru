@@ -1,0 +1,63 @@
+/* ----- Вопрос-ответ ----- */
+.faq {
+  text-align: left;
+  margin-bottom: 24px;
+  float: none;
+  h2 {
+    font-weight: bold;
+    padding-bottom: 1px;
+    color: #000;
+    display: inline-block;
+    border-bottom: 2px dotted #a1a1a1;
+    margin: 0 auto 10px;
+    font-size: 16px !important;
+    vertical-align: bottom;
+    cursor: pointer;
+    &:hover, &:focus, &:active, &:link {
+      text-decoration: none;
+    }
+  }
+  a[aria-expanded="true"] {
+    border-bottom: none;
+  }
+  &-item {
+    margin: 0 0 20px;
+    .accordion-inner {
+      padding: 10px 0 20px;
+    }
+  }
+  &-person {
+    position: absolute;
+    min-height:100%;
+    left: 0;
+    text-align: center;
+    margin: 49px auto 0;
+    padding: 0 35px;
+    @media(max-width: $content-width) {
+      position: relative;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      @media(max-width: $content-width) {
+        text-align: center;
+      }
+    }
+    img {
+      border: 3px solid #bcbcbc;
+    }
+  }
+  &-lastname {
+    margin: 5px auto 0;
+    font-weight: normal;
+    font-size: 19px !important;
+  }
+  &-name {
+    @extend .faq-lastname;
+    font-size: 12px  !important;
+    text-transform: none;
+    margin: 0 0 5px;
+  }
+}
+/* ----- /Вопрос-ответ ----- */

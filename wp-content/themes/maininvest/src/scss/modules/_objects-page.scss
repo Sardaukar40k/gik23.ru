@@ -1,0 +1,103 @@
+/* single-objects.php */
+#slider,
+#carousel-bounding-box {
+  padding: 0;
+}
+#ojectsCarousel {
+  height: 395px;
+  width: 100%;
+}
+#slider-thumbs {
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  img {
+    padding: 8px;
+    width: 140px;
+    height: auto;
+  }
+  .selected {
+    &:before {
+      content: '';
+      background: url(img/triangle-slide.png) center top no-repeat;
+      display: block;
+      margin-left: 55px;
+      width: 50px;
+      height: 5px;
+      top: -5px;
+      position: absolute;
+      z-index: 1000;
+    }
+    img {
+      position: relative;
+      border: 2px solid $main-color !important;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+  }
+}
+.structure-section {
+  border-top: none;
+}
+.single-object-meta {
+  position: absolute;
+  left: 30px;
+  bottom: 220px;
+  padding: 16px;
+  background: rgba(0, 0, 0, .7);
+  text-shadow: 2px 1px 0 #000;
+  h1 {
+    margin: 0 auto 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 26px;
+  }
+  p {
+    margin: 10px auto 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 13px;
+    color: #ffe083;
+    span {
+      color: #fff4d1;
+    }
+  }
+  .meta-diveder {
+    width: 35%;
+    height: 1px;
+    background: #fff;
+  }
+}
+.carousel-wrapper {
+  position: relative;
+}
+.plane-carusel-item {
+  margin: 35px auto;
+  img {
+    margin: 0 auto;
+  }
+  p {
+    font-style: italic;
+    text-align: center !important;
+    font-size: 16px;
+    margin-top: 25px;
+  }
+}
+
+@media(max-width: 480px) {
+  .plane-carusel-item {
+    img {
+      width: 60%;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+.object-planes {
+  width: 90%;
+  margin: 0 auto;
+}
+/* single-objects.php */

@@ -1,0 +1,230 @@
+/* ----- ����������� ������� ----- */
+.mat {
+  &__headers {
+    @include headers--big('img/matcapital/mat_thumbnail.jpg');
+  }
+  &-about {
+    margin-top: 10px;
+  }
+}
+.mat-spend {
+  padding: 0 0 130px 0;
+  margin-top: -20px;
+  background: url("img/matcapital/mat-spend__bg.jpg") center center no-repeat;
+  h3 {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    color: #000;
+    font-size: 16px;
+    &:nth-child(3) {
+      color: #fff !important;
+    }
+  }
+}
+.mat-who {
+  padding-bottom: 50px;
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+    li {
+      margin-bottom: 13px;
+    }
+  }
+}
+.mat-grow {
+  padding-bottom: 50px;
+  img {
+    width: 88.54166666666667%;
+  }
+}
+.mat-offer {
+  h2 {
+    text-align: center;
+  }
+  img {
+    margin-top: -20px;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .col-md-12 {
+    padding: 0 0 30px;
+  }
+  p {
+    padding: 10px 15px 0;
+  }
+}
+.mat-pay {
+  padding-bottom: 57px;
+  background: #f4d593 url($main-form-bg) repeat;
+  h2 {
+    background: #f4d593 url($main-form-bg) repeat !important;
+  }
+}
+.mat-pay__item {
+  margin-top: -20px;
+  h3 {
+    min-height: 35px;
+  }
+  img {
+    display: block;
+    margin: 16px auto;
+  }
+  a {
+    margin: 0 auto;
+    display: block;
+    height: 32px;
+    background-size: contain;
+    text-align: center;
+    width: 56.25%;
+    background: #d02527 url('img/offers-icons/offers-link-bg.png') center center no-repeat;
+    background-size: cover;
+    border-bottom: 4px solid #8e0002;
+    border-left: 1px solid #8e0002;
+    border-right: 1px solid #8e0002;
+    color: #fff;
+    padding-top: 4px;
+    -webkit-transition: .1s .1s ease-in-out;
+    -o-transition: .1s .1s ease-in-out;
+    transition: .1s .1s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      background-position: -5px;
+      border-bottom: 1px solid #8e0002;
+      border-left: none;
+      border-right: none;
+      padding-top: 7px;
+    }
+    &:active, &:focus {
+      border-top: 2px solid #8e0002;
+      border-left: 1px solid #8e0002;
+      border-right: 1px solid #8e0002;
+      border-bottom: none;
+      text-decoration: none;
+      padding-top: 7px;
+    }
+  }
+}
+.mat-docs {
+  h2 {
+    text-align: center !important;
+  }
+}
+.mat-docs__item {
+  text-align: center !important;
+  margin-top: 0;
+  p {
+    bottom: 0;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    padding: 0;
+  }
+}
+.mat-docs__item__img {
+  text-align: center !important;
+  margin: 0 auto;
+  min-height: 120px;
+  img {
+    height: auto;
+    width: 60% !important;
+  }
+}
+.mat {
+  .main-complexes {
+    h3 {
+      margin-top: -20px;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+}
+.mat {
+  .main-warranty {
+    -webkit-background-size: cover;
+    background-size: cover;
+    h3 {
+      color: #fff;
+    }
+    p {
+      text-align: center !important;
+    }
+  }
+  .main-warrenty-content-point {
+    color: #a3cdba;
+  }
+  .single-comment {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .mat-who {
+    ul {
+      padding: 0 15px;
+    }
+  }
+  .mat-spend {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: none;
+    padding-bottom: 10px;
+    h3 {
+      margin: 15px auto;
+      float: none;
+      width: 80%;
+      color: #000;
+      &:nth-child(3) {
+        color: #000 !important;
+      }
+    }
+  }
+  .mat-spend-wrapper {
+    h2 {
+      width: 80%;
+      text-align: center;
+    }
+  }
+  .mat-pay__item {
+    margin-top: 35px;
+  }
+  .mat-docs__item {
+    margin-bottom: 50px;
+  }
+  .mat-docs__item__img {
+    min-height: auto !important;
+    img {
+      width: 30% !important;
+    }
+  }
+  .mat .main-warranty-content {
+    section {
+      border: none;
+    }
+    h2 {
+      text-align: center;
+      background: transparent !important;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  .mat .comments {
+    h2 {
+      text-align: center;
+    }
+  }
+  .mat .single-comment {
+    img {
+      float: none;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+/* ----- /����������� ������� ----- */

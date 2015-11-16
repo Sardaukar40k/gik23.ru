@@ -1,0 +1,68 @@
+/* -------- footer-------- */
+.footer {
+  color: #fff;
+  background: $main-background url('img/f-bg.jpg') center center repeat-y;
+  padding: 20px 0 50px;
+  @media (max-width: $content-width) {
+    bottom: 0;
+    position: static;
+    text-align: center;
+    height: auto;
+  }
+  img {
+    @media (max-width: 480px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__social-button {
+    li {
+      margin: 0;
+      padding: 0;
+    }
+    @media (max-width: 480px) {
+      text-align: center !important;
+      margin: 15px auto;
+    }
+  }
+  &__confidel {
+    &__text {
+      padding: 15px;
+      p {
+        text-align: left;
+        font-size: 16px;
+        color: #000;
+      }
+    }
+    &__button {
+      font-size: 12px;
+      border-bottom: 1px dashed #fff !important;
+      color: #fff;
+      text-align: center;
+      &:hover, &:active, &:focus, &:link {
+        color: #fff;
+        border-bottom: none;
+        outline: none;
+        text-decoration: none;
+      }
+      @media (max-width: $content-width) {
+        text-align: center;
+      }
+    }
+    .modal-dialog {
+      margin-top: 10%;
+    }
+    .modal-content {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0 !important;
+    }
+  }
+  &__informer {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+/* -------- /footer-------- */

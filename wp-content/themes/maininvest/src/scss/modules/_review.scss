@@ -1,0 +1,137 @@
+/*--------- Îòçûâû ---------*/
+.reviews {
+  margin: 10px -15px;
+  border-top: 2px dotted #000;
+  padding: 0;
+  text-align: center;
+  @media (max-width: $content-width) {
+    padding: 0 15px;
+  }
+  h1 {
+    font-size: 25px;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0;
+    top: -44px;
+    margin-bottom: 0;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-item {
+    padding: 0 15px;
+    margin: 0 auto 30px;
+    width: 50%;
+    float: left;
+    min-height: 255px;
+    @media (max-width: $content-width) {
+      width: 80%;
+      height: auto;
+      float: none;
+    }
+    @media (max-width: $content-width/2) {
+      width: 90%;
+    }
+    img {
+      width: 30%;
+      float: left;
+      @media (max-width: $content-width) {
+        position: static;
+        float: none;
+      }
+    }
+    &-content {
+      min-height: 225px;
+      font-style: italic;
+      text-align: left;
+      padding: 15px;
+      border: 2px solid #c8c8c8;
+      width: 67%;
+      float: right;
+      position: relative;
+      @media screen and (max-width: $content-width) {
+        margin: 50px auto;
+        width: 100%;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background: url('img/comments/triangle.png') no-repeat;
+        width: 32px;
+        height: 40px;
+        left: -32px;
+        bottom: 35px;
+        z-index: 1;
+        @media screen and (max-width: $content-width) {
+          content: '';
+          position: absolute;
+          display: block;
+          background: url('img/comments/triangle-480.png') no-repeat center center;
+          width: 58px;
+          height: 28px;
+          left: 45%;
+          top: -28px;
+          z-index: 1;
+        }
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background: url('img/comments/triangle-2.png') no-repeat;
+        width: 32px;
+        height: 40px;
+        right: -4px;
+        bottom: -12px;
+        z-index: 1;
+      }
+      h2 {
+        font-size: 16px;
+        text-align: left;
+        margin-top: 0;
+        font-weight: bold;
+        span {
+          font-size: 12px;
+          margin-left: 10px;
+          color: #777
+        }
+      }
+      a {
+        font-weight: bold;
+        color: #6d4c07;
+        float: right;
+        clear: both;
+        font-size: 12px;
+        font-style: italic;
+        text-decoration: underline;
+        margin: 0 20px auto;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &-object {
+        font-weight: bold;
+        color: #b48300;
+        font-size: 11px;
+        text-align: left;
+        border-bottom: 1px solid #dbdbdb;
+        padding-bottom: 10px;
+        width: 50%;
+      }
+    }
+  }
+  &_full {
+    &-item {
+      width: 100%;
+      img {
+        width: 20%;
+      }
+      &-content {
+        width: 76%;
+      }
+    }
+  }
+}
+

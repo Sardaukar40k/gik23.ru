@@ -1,0 +1,773 @@
+/* ------- mixins ---------- */
+@font-face {
+  font-family: 'Adelle Cyrillic';
+  font-weight: bold;
+  src: url("../../../fonts/AdelleCyrillic-Bold_gdi.eot") format("embedded-opentype"), url("../../../fonts/AdelleCyrillic-Bold_gdi.woff"), url("../../../fonts/AdelleCyrillic-Bold_gdi.ttf"), url("../../../fonts/AdelleCyrillic-Bold_gdi.svg"); }
+
+@font-face {
+  font-family: 'Adelle Cyrillic';
+  font-weight: normal;
+  src: url("../../../fonts/AdelleCyrillic_gdi.eot") format("embedded-opentype"), url("../../../fonts/AdelleCyrillic_gdi.woff"), url("../../../fonts/AdelleCyrillic_gdi.ttf"), url("../../../fonts/AdelleCyrillic_gdi.svg"); }
+
+@font-face {
+  font-family: 'Adelle Cyrillic';
+  font-style: italic;
+  src: url("../../../fonts/AdelleCyrillic-Italic_gdi.eot") format("embedded-opentype"), url("../../../fonts/AdelleCyrillic-Italic_gdi.woff"), url("../../../fonts/AdelleCyrillic-Italic_gdi.ttf"), url("../../../fonts/AdelleCyrillic-Italic_gdi.svg"); }
+
+@font-face {
+  font-family: 'Adelle Cyrillic';
+  font-weight: 500;
+  src: url("../../../fonts/AdelleCyrillic-SemiBold_gdi.eot") format("embedded-opentype"), url("../../../fonts/AdelleCyrillic-SemiBold_gdi.woff"), url("../../../fonts/AdelleCyrillic-SemiBold_gdi.ttf"), url("../../../fonts/AdelleCyrillic-SemiBold_gdi.svg"); }
+
+@font-face {
+  font-family: 'Adelle Cyrillic';
+  font-weight: 300;
+  src: url("../../../fonts/Adelle Cyrillic Light.ttf"); }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: bold;
+  src: url("../../../fonts/BebasNeue Bold.ttf"); }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: normal;
+  src: url("../../../fonts/BebasNeue Book.ttf"); }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-weight: 300;
+  src: url("../../../fonts/BebasNeue Light.ttf"); }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 960px; } }
+
+@media (max-width: 992px) {
+  .container {
+    width: 960px; } }
+
+@media (max-width: 960px) {
+  .container {
+    width: 100%; } }
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  padding: 0; }
+  @media (max-width: 960px) {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      padding: 0 15px; } }
+
+a:focus {
+  outline: none !important;
+  text-decoration: none; }
+
+input:focus {
+  outline: none !important; }
+
+body {
+  color: #000; }
+
+h2 {
+  font-family: "Adelle Cyrillic";
+  font-weight: 500; }
+
+.logo-phone {
+  padding: 10px 0; }
+
+.menu {
+  background: url("../img/footer-line.png") center top repeat-x;
+  padding: 20px 0 12px; }
+  .menu .container {
+    padding-left: 0; }
+  .menu ul {
+    margin: 0 auto;
+    list-style: circle;
+    list-style-position: outside;
+    padding: 0; }
+    .menu ul li {
+      font-family: "Adelle Cyrillic";
+      font-size: 18px;
+      color: #000;
+      border-bottom: 1px dotted #000;
+      margin-right: 15px; }
+      .menu ul li:before {
+        content: url("../img/circle.png");
+        position: relative;
+        bottom: 3px;
+        right: 16px; }
+      .menu ul li:first-child:before {
+        display: none; }
+      .menu ul li:hover {
+        border: none; }
+      .menu ul li a {
+        font-size: 15px;
+        color: #000 !important; }
+        .menu ul li a:hover, .menu ul li a:active, .menu ul li a:focus {
+          text-decoration: none; }
+
+.head-section {
+  background: url("../img/main-bg-podsolnuhy.jpg") center center no-repeat;
+  background-size: cover;
+  height: 560px; }
+
+.main-headers-block {
+  background: url("../img/main-head-bg.png") center center no-repeat;
+  background-size: content;
+  color: #522104;
+  margin: 15px auto;
+  padding: 100px 0 43px;
+  width: 65%; }
+  .main-headers-block:after {
+    content: url("../img/deadline.png");
+    position: absolute;
+    bottom: -8px;
+    right: 135px; }
+  .main-headers-block h1 {
+    font-family: "Adelle Cyrillic";
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px; }
+    .main-headers-block h1 span {
+      display: block;
+      margin-top: 10px;
+      font-family: "Adelle Cyrillic";
+      font-weight: bold;
+      font-style: italic;
+      font-size: 37px; }
+  .main-headers-block h2 {
+    margin-top: 5px;
+    font-family: "Adelle Cyrillic";
+    font-style: italic;
+    font-size: 18px; }
+  .main-headers-block img {
+    margin-bottom: 10px; }
+
+section {
+  background: url("../img/section-head-bg.png") center top no-repeat;
+  margin-top: 30px;
+  padding-top: 30px; }
+  section h2 {
+    margin: 40px auto;
+    font-size: 28px;
+    text-align: center; }
+
+.silence {
+  padding-bottom: 300px; }
+  .silence img {
+    border: 2px solid #282828;
+    display: block;
+    margin: 0 auto 15px; }
+  .silence p {
+    font-family: "Adelle Cyrillic";
+    font-style: italic;
+    font-size: 16px;
+    text-align: center; }
+
+.silence-form {
+  background: url("../img/silence-form-bg.png") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  margin: 35px 25%;
+  padding: 42px 50px; }
+  .silence-form .divider {
+    width: 40%;
+    height: 2px;
+    background-color: #fff;
+    margin: 15px auto; }
+  .silence-form img {
+    margin: 20px auto;
+    border: none; }
+  .silence-form a {
+    font-family: "Adelle Cyrillic";
+    font-weight: 500;
+    line-height: 1;
+    display: block;
+    width: 60%;
+    height: 57px;
+    font-size: 16px;
+    color: #5e1c00;
+    background: url("../img/silence-link.png") center center no-repeat;
+    background-size: 100%;
+    padding: 13px 0 5px;
+    margin: 0 auto; }
+  .silence-form p {
+    font-family: "Adelle Cyrillic";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+    margin-bottom: 0; }
+  .silence-form h3 {
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    font-size: 25px; }
+  .silence-form li {
+    font-family: "Adelle Cyrillic";
+    font-size: 15px; }
+
+.map {
+  width: 100%; }
+  .map iframe {
+    width: 100%; }
+
+.stucture {
+  text-align: center; }
+  .stucture a {
+    padding-top: 8px;
+    clear: both;
+    display: block;
+    margin: 30px auto;
+    font-size: 25px;
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    color: #fff;
+    background: url("../img/structure-button.png") center center no-repeat;
+    height: 50px;
+    width: 60%; }
+
+.structure-item {
+  padding: 0 30px 40px; }
+  .structure-item img {
+    margin: 0 auto;
+    display: block; }
+  .structure-item h3 {
+    height: 45px;
+    font-family: "Adelle Cyrillic";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px; }
+  .structure-item p {
+    font-family: "Adelle Cyrillic";
+    font-size: 14px; }
+  .structure-item ul {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0; }
+  .structure-item li {
+    font-family: "Adelle Cyrillic";
+    font-size: 14px; }
+
+.tech h2 {
+  width: 60%;
+  margin-bottom: 0; }
+
+.tech h3 {
+  margin-top: 7px;
+  font-family: "Adelle Cyrillic";
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 45px; }
+
+.tech h4 {
+  font-family: "Adelle Cyrillic";
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 26px; }
+
+.tech p {
+  font-family: "Adelle Cyrillic";
+  font-size: 14px; }
+
+.tech .material-item {
+  margin-bottom: 30px; }
+  .tech .material-item img {
+    float: left;
+    width: 15%; }
+  .tech .material-item p {
+    width: 55%;
+    margin-left: 10px;
+    padding-top: 2%;
+    float: left; }
+
+.tech-build {
+  margin-bottom: 10px !important; }
+
+.tech-constr {
+  padding-top: 25px;
+  margin-bottom: 5px !important; }
+
+.plane {
+  position: relative; }
+  .plane p {
+    font-family: "Adelle Cyrillic";
+    font-style: italic;
+    font-size: 15px;
+    text-align: center; }
+  .plane img {
+    width: 100%; }
+  .plane .liters {
+    cursor: pointer;
+    overflow: visible;
+    position: absolute; }
+  .plane .liter-1 {
+    width: 19%;
+    height: 27%;
+    bottom: 45.5%;
+    left: 4%; }
+    .plane .liter-1:hover:after {
+      overflow: visible;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -5.5%;
+      top: -2%;
+      width: 100%;
+      height: 100%;
+      background: url("../img/plane-hover/house-1.png") center center no-repeat;
+      background-size: 98%; }
+  .plane .liter-2 {
+    width: 18%;
+    height: 31%;
+    left: 28%;
+    bottom: 43.5%; }
+    .plane .liter-2:hover:after {
+      overflow: visible;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -6.5%;
+      top: 1%;
+      width: 100%;
+      height: 100%;
+      background: url("../img/plane-hover/house-2.png") center center no-repeat;
+      background-size: 100%; }
+  .plane .liter-3 {
+    width: 20%;
+    height: 25%;
+    left: 40%;
+    bottom: 48.5%; }
+    .plane .liter-3:hover:after {
+      overflow: visible;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -4.5%;
+      top: -6%;
+      width: 120%;
+      height: 120%;
+      background: url("../img/plane-hover/house-3.png") center center no-repeat;
+      background-size: 85%; }
+  .plane .liter-4 {
+    width: 16%;
+    height: 18%;
+    bottom: 55.5%;
+    left: 56%; }
+    .plane .liter-4:hover:after {
+      overflow: visible;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -20%;
+      top: 0;
+      width: 125%;
+      height: 100%;
+      background: url("../img/plane-hover/house-4.png") center center no-repeat;
+      background-size: 100%; }
+  .plane .liter-5 {
+    width: 16%;
+    height: 16%;
+    left: 71%;
+    bottom: 57.5%; }
+    .plane .liter-5:hover:after {
+      overflow: visible;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -34%;
+      top: -9%;
+      width: 131%;
+      height: 120%;
+      background: url("../img/plane-hover/house-5.png") center center no-repeat;
+      background-size: 100%; }
+  .plane .liter-6 {
+    width: 12%;
+    height: 14%;
+    left: 85%;
+    bottom: 59.5%; }
+    .plane .liter-6:hover:after {
+      overflow: visible;
+      content: '';
+      display: block;
+      position: absolute;
+      left: -72%;
+      top: -13%;
+      width: 178%;
+      height: 120%;
+      background: url("../img/plane-hover/house-6.png") center center no-repeat;
+      background-size: 100%; }
+  .plane .know-price {
+    padding-top: 8px;
+    clear: both;
+    display: block;
+    margin: 30px auto;
+    font-size: 25px;
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    color: #fff;
+    background: url("../img/plane-button.png") center center no-repeat;
+    width: 50%;
+    height: 50px;
+    text-align: center; }
+
+.arrangement {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  .arrangement img {
+    border: 2px solid #282828;
+    display: block;
+    margin: 0 auto 15px; }
+  .arrangement p {
+    text-align: center;
+    font-family: "Adelle Cyrillic";
+    font-style: italic;
+    font-size: 16px; }
+  .arrangement a {
+    padding-top: 8px;
+    clear: both;
+    display: block;
+    margin: 30px auto;
+    font-size: 25px;
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    color: #fff;
+    background: url("../img/plane-button.png") center center no-repeat;
+    width: 50%;
+    height: 50px;
+    text-align: center; }
+
+.arr-item {
+  margin-bottom: 40px; }
+
+.finishing {
+  padding-bottom: 30px; }
+  .finishing h2 {
+    margin-top: 95px; }
+  .finishing h3 {
+    text-align: center;
+    font-family: "Adelle Cyrillic";
+    font-weight: 500;
+    font-size: 21px; }
+    .finishing h3 small {
+      font-size: 15px;
+      color: #000; }
+  .finishing img {
+    display: block;
+    margin: 10px auto 25px; }
+  .finishing a {
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    background: url("../img/finishing-button.png") center center no-repeat;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-top: 11px;
+    width: 85%;
+    height: 45px; }
+
+#partners-podsolnuhi-carusel {
+  margin-bottom: 50px; }
+
+.banks a {
+  margin: 40px auto 10px;
+  padding: 13px 0 15px;
+  background: url("../img/banks-more-button.png") center center no-repeat;
+  text-align: center;
+  display: block;
+  width: 60%;
+  height: 70px;
+  font-family: "Adelle Cyrillic";
+  font-size: 12px;
+  color: #5e1c00; }
+  .banks a span {
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    font-size: 22px; }
+  .banks a:hover {
+    text-decoration: none; }
+
+.bank-more-divider {
+  height: 1px;
+  background: #5e1c00;
+  width: 65%;
+  margin: 2px auto 0; }
+
+.faq h3 {
+  font-family: "Adelle Cyrillic";
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 19px;
+  padding-bottom: 0; }
+
+.faq p {
+  margin-top: 0;
+  padding-top: 0;
+  font-family: "Adelle Cyrillic";
+  font-size: 18px; }
+
+.buy {
+  margin-bottom: 70px; }
+  .buy-item {
+    width: 20%;
+    float: left; }
+    @media all and (max-width: 960px) {
+      .buy-item {
+        width: 100%;
+        float: none; } }
+    .buy-item img {
+      display: block;
+      margin: 10px auto 20px; }
+    .buy-item p {
+      font-size: 18px;
+      text-align: center;
+      font-weight: 500; }
+
+.call h2 {
+  font-family: "Adelle Cyrillic";
+  font-weight: 500;
+  font-size: 33px; }
+
+.call a {
+  font-family: "Adelle Cyrillic";
+  font-size: 18px;
+  color: #4475a6;
+  border-bottom: 1px dashed #4475a6; }
+  .call a:hover {
+    text-decoration: none;
+    border-bottom: none; }
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  background: url("../img/footer-line.png") center top repeat-x;
+  padding: 20px 0 60px; }
+  footer a {
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Adelle Cyrillic";
+    font-size: 18px;
+    color: #4475a6;
+    border-bottom: 1px dashed #4475a6; }
+    footer a:hover {
+      text-decoration: none;
+      border-bottom: none; }
+
+.top-park-bg {
+  background: url("../img/silence-bg.jpg") center 40% no-repeat;
+  background-size: content; }
+
+.sky-bg {
+  background: url("../img/sky-bg.jpg") center 60% no-repeat;
+  background-size: content; }
+
+.family-bg {
+  background: url("../img/family-bg.jpg") center center no-repeat; }
+
+.phone {
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  font-size: 36px;
+  color: #000; }
+  .phone span {
+    font-family: "Bebas Neue";
+    font-weight: normal;
+    font-size: 30px; }
+
+.callback-button {
+  font-family: "Adelle Cyrillic";
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+  padding: 12px 23px;
+  height: 30px;
+  width: 150px;
+  background: url("../img/top-button.png") center center no-repeat;
+  background-size: 100%;
+  border: none; }
+  .callback-button:hover, .callback-button:focus, .callback-button:active {
+    color: #fff; }
+
+/* carousel button */
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute; }
+
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+  left: -45px;
+  top: 35%;
+  opacity: .5; }
+  .owl-theme .owl-controls .owl-buttons .owl-prev .control-img {
+    width: 100% !important; }
+
+.owl-theme .owl-controls .owl-buttons .owl-next {
+  right: -45px;
+  top: 35%;
+  opacity: .5; }
+  .owl-theme .owl-controls .owl-buttons .owl-next .control-img {
+    width: 100% !important; }
+
+/* /carousel button */
+.main-map iframe {
+  width: 100%; }
+
+.modal-dialog {
+  margin-top: 13%; }
+
+.modal-content {
+  -webkit-border-radius: 0;
+  border-radius: 0 !important; }
+  .modal-content h2 {
+    text-align: center;
+    font-family: "Adelle Cyrillic";
+    font-size: 32px;
+    margin-bottom: 6px;
+    padding-bottom: 0; }
+  .modal-content h3 {
+    text-align: center;
+    font-family: "Adelle Cyrillic";
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 2px solid #ADADAD;
+    padding-bottom: 18px;
+    padding-top: 0;
+    width: 85%;
+    margin: 0 auto 36px; }
+  .modal-content form {
+    text-align: center;
+    margin: 0 auto; }
+    .modal-content form input {
+      border: 1px solid #B2B2B2;
+      text-align: center;
+      width: 65%;
+      height: 58px;
+      margin-bottom: 15px;
+      font-size: 21px;
+      font-family: "Adelle Cyrillic"; }
+    .modal-content form input[type="submit"] {
+      background: url("../img/form-button.png") center center no-repeat;
+      margin-top: 20px;
+      color: #fff;
+      height: 59px;
+      font-family: "Adelle Cyrillic";
+      font-weight: bold;
+      font-size: 25px;
+      border: none; }
+  .modal-content p {
+    font-family: "Adelle Cyrillic";
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px; }
+
+.pod-part-carousel {
+  width: 80%;
+  margin: 10px auto; }
+  .pod-part-carousel .owl-item {
+    text-align: center !important; }
+    .pod-part-carousel .owl-item img {
+      display: block;
+      margin: 0 auto; }
+
+a[href$=".pdf"] {
+  text-align: center;
+  padding-top: 205px;
+  margin-left: 10px;
+  width: 153px;
+  height: 270px;
+  background: url("../img/doc.png") center top no-repeat;
+  display: block;
+  font-family: "Adelle Cyrillic";
+  font-size: 12px; }
+
+.confed {
+  padding: 15px; }
+  .confed p {
+    text-align: left;
+    font-size: 16px;
+    font-family: "Adelle Cyrillic"; }
+
+.pod-docs-carousel {
+  width: 80%;
+  margin: 10px auto; }
+  .pod-docs-carousel .owl-item {
+    text-align: center !important; }
+    .pod-docs-carousel .owl-item a {
+      margin: 0 auto; }
+
+.news {
+  font-family: "Adelle Cyrillic";
+  margin-bottom: 20px; }
+  .news-item {
+    width: 25%;
+    float: left;
+    margin: 20px auto;
+    padding: 0 10px; }
+    @media (max-width: 960px) {
+      .news-item {
+        width: 100%; } }
+    .news-item a {
+      width: 100%;
+      display: block;
+      position: relative;
+      overflow: hidden; }
+      .news-item a .item-caption {
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        background: rgba(0, 0, 0, 0.65) url("../img/m-news-item-follow.png") center center no-repeat;
+        background-size: 15%;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        z-index: 4; }
+        .news-item a .item-caption:hover {
+          opacity: .8; }
+      .news-item a img {
+        width: 100%;
+        position: relative;
+        display: block;
+        -webkit-transition: all .3s .1s ease-in;
+        transition: all .3s .1s ease-in; }
+        @media (max-width: 960px) {
+          .news-item a img {
+            display: block;
+            max-width: 65%;
+            margin: 0 auto; } }
+        @media (max-width: 480px) {
+          .news-item a img {
+            max-width: 85%; } }
+      .news-item a:hover img {
+        -webkit-transform: scale(1.05, 1.05);
+        -ms-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05); }
+    .news-item h3 {
+      line-height: 1.2;
+      text-align: center;
+      margin: 15px auto 2px; }
+      @media (max-width: 960px) {
+        .news-item h3 {
+          max-width: 65%; } }
+      @media (max-width: 480px) {
+        .news-item h3 {
+          max-width: 85%; } }
+      .news-item h3 a {
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none; }
+        .news-item h3 a:hover {
+          text-decoration: underline; }
+    .news-item p {
+      text-align: center;
+      font-size: 12px; }
+
+.amimate--scale {
+  -webkit-transition: all .2s  linear;
+  transition: all .2s  linear; }
+  .amimate--scale:hover {
+    position: relative;
+    -webkit-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05); }
