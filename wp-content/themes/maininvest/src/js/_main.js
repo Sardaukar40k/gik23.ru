@@ -56,7 +56,6 @@ $(document).ready(function() {
 
   owl_leadership.owlCarousel ({
   		items : 3,
-  		itemsDesktop : [1920, 3],
   		itemsDesktop : [960, 3],
   		itemsTablet : [600, 2],
   		itemsMobile : [480, 1],
@@ -82,7 +81,6 @@ $(document).ready(function() {
   owl_managers.owlCarousel ({
       autoPlay: 2500,
   		items : 3,
-  		itemsDesktop : [1920, 3],
   		itemsDesktop : [960, 3],
   		itemsTablet : [600, 2],
   		itemsMobile : [480, 1],
@@ -107,7 +105,6 @@ $(document).ready(function() {
 
   owl_objects.owlCarousel ({
   		items : 5,
-  		itemsDesktop : [1920, 5],
   		itemsDesktop : [960, 5],
   		itemsTablet : [600, 2],
   		itemsMobile : [480, 1],
@@ -133,8 +130,7 @@ $(document).ready(function() {
   owl_partners.owlCarousel ({
       autoPlay: 2000,
   		items : 4,
-  		itemsDesktop : [1920, 4],
-  		itemsDesktop : [960, 3],
+  		itemsDesktop : [960, 4],
   		itemsTablet : [600, 2],
   		itemsMobile : [480, 1],
       navigation: true,
@@ -158,8 +154,7 @@ $(document).ready(function() {
 
   owl_plane.owlCarousel ({
   		items : 1,
-  		itemsDesktop : [1920, 2],
-  		itemsDesktop : [960, 1],
+  		itemsDesktop : [960, 2],
   		itemsTablet : [600, 1],
   		itemsMobile : [480, 1],
        navigation: true,
@@ -183,7 +178,6 @@ $(document).ready(function() {
 
   owl_certif.owlCarousel ({
   		items : 6,
-  		itemsDesktop : [1920, 6],
   		itemsDesktop : [960, 3],
   		itemsTablet : [600, 1],
   		itemsMobile : [480, 1],
@@ -208,7 +202,6 @@ $(document).ready(function() {
 
   about_docs.owlCarousel ({
       items : 4,
-      itemsDesktop : [1920, 4],
       itemsDesktop : [960, 4],
       itemsTablet : [600, 1],
       itemsMobile : [480, 1],
@@ -263,33 +256,6 @@ window['liv'+'eTe'+'x'] = true,
         console.log(config.PROJECT_NAME + " is already defined.");
 })();
 
-
-
-//object hover Страница Объекты
-
-jQuery(document).ready(function() {
-  $('.objects-item').on('mouseenter', function() {
-    $('.beneffit-wrapper', this).fadeIn(400);
-    /* Act on the event */
-  });
-  $('.objects-item').on('mouseleave', function() {
-    $('.beneffit-wrapper', this).fadeOut(0);
-    /* Act on the event */
-  });
-
-});
-
-//Главное меню
-
-  jQuery(document).ready(function($) {
-      $('.menu-item').on('mouseenter', function() {
-        $('.sub-menu', this).slideDown(200);
-      });
-    
-        $('.menu-item').on('mouseleave', function() {
-          $('.sub-menu', this).slideUp(0);
-      });
-  });
 
 // Маска для телефона
 

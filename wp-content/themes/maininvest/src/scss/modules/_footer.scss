@@ -1,7 +1,8 @@
 /* -------- footer-------- */
 .footer {
+  background: $bg_main center center no-repeat;
+  background-size: cover;
   color: #fff;
-  background: $main-background url('img/f-bg.jpg') center center repeat-y;
   padding: 20px 0 50px;
   @media (max-width: $content-width) {
     bottom: 0;

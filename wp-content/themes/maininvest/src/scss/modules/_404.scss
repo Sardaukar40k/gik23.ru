@@ -1,0 +1,65 @@
+/* 404 */
+.eror-page {
+  text-align: center;
+  background: url(img/error-bg.jpg) center center no-repeat;
+  background-position: 60% 20%;
+  a {
+    text-align: center;
+    font-weight: 500;
+    color: #000;
+    background: url(img/error-back-button.png) center center no-repeat;
+    width: 96px;
+    height: 86px;
+    font-size: 13px;
+    display: block;
+    padding: 63px 0 0 5px;
+    margin: -60px auto 0 20%;
+    &:link, &:hover, &:focus, &:active  {
+      color: #000;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+}
+.error-title {
+  margin: 0 auto !important;
+  padding-top: 295px;
+  background: url(img/error-title-bg.png) center bottom no-repeat;
+  height: 500px;
+  text-align: center;
+  h1 {
+    margin: 0 auto;
+    padding: 0;
+    font-weight: bold;
+    font-size: 42px;
+    span {
+      line-height: 1;
+      font-size: 103px;
+    }
+  }
+  h2 {
+    margin-top: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 32px;
+  }
+}
+/* ----- 404 ----- */
+@media (max-width: 480px) {
+  .eror-page {
+    a {
+      margin: 15px auto;
+    }
+  }
+  .error-title {
+    h1 {
+      font-size: 32px;
+      span {
+        font-size: 63px;
+      }
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+}

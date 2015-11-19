@@ -108,3 +108,9 @@
     margin-top: 0;
   }
 }
+
+@mixin media-query($width, $media: screen) {
+  @media #{$media} and (max-width: #{$width}) {
+    @content;
+  }
+}

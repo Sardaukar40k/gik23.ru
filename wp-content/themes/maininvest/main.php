@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-  <!-- TODO: переписать вёрстку страницы -->
+  <!-- TODO: переписать вёрстку слайдера -->
 
 <div class="container-fluid">
 
