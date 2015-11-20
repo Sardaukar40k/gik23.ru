@@ -167,6 +167,16 @@
             display: none;
           }
         }
+        &.current-menu-item {
+          a {
+            color: $color_brand;
+          }
+        }
+        &.current-menu-parent {
+          &>a {
+            color: $color_brand;
+          }
+        }
       }
       .menu-item-has-children {
         position: relative;
@@ -228,6 +238,13 @@
           }
           &:last-child {
             border: none;
+          }
+          &.current-menu-item {
+            a {
+              background: $color_submenu-hover-bg;
+              color: #fff;
+            }
+
           }
           a {
             padding: 8px 15px;

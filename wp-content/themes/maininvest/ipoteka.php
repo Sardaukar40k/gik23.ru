@@ -8,7 +8,7 @@
         <div class="col-md-12 ipoteka__headers">
             <div class="container">
                 <div class="row">
-                    <h1 class="col-md-7">ипотека в краснодаре от 11,15%<br>
+                    <h1 class="col-md-7">ипотека в краснодаре от 10,9%<br>
                                         за 2 дня без похода по банкам
                     </h1>
                 </div>
@@ -43,8 +43,8 @@
                 </div>
                     <div class="ipoteka__reasons__item">
                         <figure>
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ipoteka/ipoteka__reason__item__icon-1.jpg" alt="Ипотека 11,5%">
-                            <figcaption>минимальная процентная ставка – от 11,15% годовых*</figcaption>
+                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ipoteka/ipoteka__reason__item__icon-1.jpg" alt="Ипотека 10,9%">
+                            <figcaption>минимальная процентная ставка – от 10,9% годовых*</figcaption>
                         </figure>
                     </div>
                     <div class="ipoteka__reasons__item">
@@ -140,7 +140,7 @@
                 <article class="reviews-item-content">
                   <h2>Болубенцева Кристина Александровна</h2>
                   <p class="reviews-item-content-object"><?php echo get_field('object'); ?></p>
-                  <p>Никак не осмеливались взять ипотеку, боялись, что не потянем. Но наткнулись на очень выгодное предложение – всего 11,15 % годовых. В настоящее время таких низких процентов не найти, поэтому долго не думали – взяли! И с оформлением возни не было, банк сразу одобрил ипотеку.</p>
+                  <p>Никак не осмеливались взять ипотеку, боялись, что не потянем. Но наткнулись на очень выгодное предложение – всего 10,9 % годовых. В настоящее время таких низких процентов не найти, поэтому долго не думали – взяли! И с оформлением возни не было, банк сразу одобрил ипотеку.</p>
                 </article>
               </div>
 
