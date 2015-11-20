@@ -23,7 +23,14 @@
                         <div class="item <?php if ($post->ID == 1865 ) echo 'hot-eigth'; ?> <?php if ($post->ID == 2094) echo 'hot-eigth'; ?> <?php if ($post->ID == 2568) echo 'hot-eigth'; ?> <?php if ($post->ID == 1653) echo 'active'; ?>  " style="background: url('<?php echo get_field('main-banner-img'); ?>') center center no-repeat; background-size: cover;">
                             <div class="container m-caption-wrap">
                                 <div class="carousel-caption">
+                                  <?php if($post->ID == 1653) : ?>
+                                    <h1><?php echo get_field('main-banner-head'); ?></h1><br>
+
+                                  <?php else : ?>
                                     <h2><?php echo get_field('main-banner-head'); ?></h2><br>
+
+                                  <?php endif; ?>
+
                                     <p><?php echo get_field('main-banner-description'); ?></p><br>
                                     <?php if (get_field('main-banner-link')) : ?>
                                         <a class="btn btn-lg btn-primary" href="<?php echo get_field('main-banner-link'); ?>" role="button">Узнать больше</a>
@@ -66,7 +73,7 @@
   <!-- start: Карусель объектов -->
   <div class="row">
     <div class="container">
-      <?php $title = 'Выберите свою квартиру'; ?>
+      <?php $title = 'Квартиры от застройщика'; ?>
       <?php include(TEMPLATEPATH . '/template-parts/objects/content-objects-carousel.php'); ?>
 
     </div>

@@ -1,3 +1,16 @@
+/* -- WP -- */
+
+.img_left {
+  float: left;
+  margin: 0 10px 10px auto !important;
+  display: block;
+}
+.img_right {
+  float: left;
+  margin: 0 auto 10px 10px !important;
+  display: block;
+}
+
 /* ------ Map styles --------*/
 iframe {
     width: 100%;
