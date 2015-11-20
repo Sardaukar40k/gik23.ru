@@ -4,33 +4,36 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title><?php wp_title(); ?></title>
+
   <?php wp_head(); ?>
 
   <!-- Webmaster varifications -->
-  <meta name="google-site-verification" content="ie1uuzfrYJsYNx93G8V-X5GbIz5XkaLdMRIAFxIKlfk" />
-  <meta name='yandex-verification' content='58990db54ee34bc1' />
+    <meta name="google-site-verification" content="ie1uuzfrYJsYNx93G8V-X5GbIz5XkaLdMRIAFxIKlfk" />
+    <meta name='yandex-verification' content='58990db54ee34bc1' />
   <!-- /Webmaster varifications -->
 
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
   <!-- Бибилотеки -->
-  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri ());  ?>/libs/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri ());  ?>/libs/owl-carousel/owl-carousel/owl.carousel.css">
   <!-- /Библиотеки -->
 
   <!-- Основные стили -->
-  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
   <!-- /Основные стили -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
   <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/gik.png" type="image/x-icon">
   <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/gik.png" type="image/x-icon">
 
 </head>
+
 <body>
 
 <!-- Google Tag Manager -->
@@ -75,52 +78,9 @@
 
         <!-- Menu -->
         <div class="row">
-          <section class="header_new-menu">
 
-            <nav role="navigation" >
-              <!-- nav-header -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle xs-menu-toggle" data-toggle="collapse" data-target="#main-menu">
-                  <i class="fa fa-bars fa-2x"></i>
-                </button>
-              </div>
-              <!-- /nav-header -->
+          <?php include(TEMPLATEPATH . '/tempate-parts/nav/nav.php'); ?>
 
-              <!-- nav-body -->
-              <div class="collapse navbar-collapse" id="main-menu">
-
-                <!-- desktop -->
-                <div class="nav navbar-nav hidden-xs">
-                  <?php wp_nav_menu(
-                      array(
-                          'theme_location'  => 'main-menu',
-                          'menu_id'         => '',
-                          'container'       => false,
-                          'menu_class'      => 'main-menu'
-                      )
-                  ); ?>
-                </div>
-                <!-- /desktop -->
-
-                <!-- mobile -->
-                <div class="nav navbar-nav visible-xs">
-                  <?php wp_nav_menu(
-                      array(
-                          'theme_location' => 'xs-menu',
-                          'menu_id'         => '',
-                          'container'       => false,
-                          'menu_class'      => 'xs-menu'
-                      )
-                  ); ?>
-
-                </div>
-                <!-- /mobile -->
-
-              </div>
-              <!-- /nav-body -->
-            </nav>
-
-          </section>
         </div>
         <!-- /Menu -->
 

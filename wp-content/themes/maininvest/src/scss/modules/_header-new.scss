@@ -1,9 +1,13 @@
 .header_new {
-  background: $bg_main;
+  background: $bg_main no-repeat center top;
   background-size: cover;
   box-shadow: 0 2px 4px rgba(0,0,0, .3);
   position: relative;
   z-index: 500;
+
+  @include media-query($content-width/2) {
+    background: $color_background-brand;
+}
 
   /* -- .header_new-info -- */
   &-info {
