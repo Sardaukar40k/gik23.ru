@@ -1,28 +1,23 @@
 /* -- color -- */
-  $color_brand: #d6b36a;
-  $color_opening-time: #cfc3a9;
-  $color_opening-time-span: #6e644d;
-  $color_background-brand: #1d1d1a;
-  $color_menu-hover-bg: #f1d599;
-  $color_submenu-hover-bg: #8e7c56;
-  $color_main-text: #000;
-  $color_buttons_main: #e70710;
-  $color_breadcrumbs-text: #9d9d9d;
-/* -- /colors -- */
-
+$color_brand: #d6b36a;
+$color_opening-time: #cfc3a9;
+$color_opening-time-span: #6e644d;
+$color_background-brand: #1d1d1a;
+$color_menu-hover-bg: #f1d599;
+$color_submenu-hover-bg: #8e7c56;
+$color_main-text: #000;
+$color_buttons_main: #e70710;
+$color_breadcrumbs-text: #9d9d9d;
+$color_form-xs-bg: #f1d599;
 
 /* -- fonts -- */
-  $font_main: 'Adelle Cyrillic', serif;
-  $font_second: 'Bebas Neue', sans-serif;
-  $font_header-phone: 'Lato', sans-serif;
-/* -- /fonts -- */
-
+$font_main: 'Adelle Cyrillic', serif;
+$font_second: 'Bebas Neue', sans-serif;
+$font_header-phone: 'Lato', sans-serif;
 
 /* -- backgrounds -- */
-  $bg_main: url('img/bg/main.png');
-  $bg_form-bg: url('img/callback-bg.jpg');
-/* -- /backgrounds -- */
-
+$bg_main: url('img/bg/main.png');
+$bg_form-bg: url('img/callback-bg.jpg');
 
 $post-info-color: #9d9d9d;
 $sections-border-color: #a1a1a1;
@@ -36,8 +31,4 @@ $main-background: #1d1d1b;
 $main-font: 'Adelle Cyrillic';
 $main-text-color: #000;
 $main-form-bg: 'img/callback-bg.jpg';
-
-/* forms */
-
-
 $file-loader-color: #d2aa57;

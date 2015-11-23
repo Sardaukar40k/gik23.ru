@@ -2,56 +2,12 @@
 
 <?php get_header(); ?>
 
-  <!-- TODO: переписать вёрстку слайдера -->
-
 <div class="container-fluid">
 
   <!-- start: Баннеры -->
   <div class="row">
-        <div class="col-md-12" style="padding: 0;">
-            <div id="bannerCarousel" class="carousel slide"  data-ride="carousel">
-                <div class="carousel-inner">
-                    <?php $banners = array(
-                            'post_type' => 'headers',
-                            'publish' => true,
-                            'paged' => get_query_var('paged'),
-                            'post_per_page' => '-1'
-                            );
-                            $query = new WP_Query($banners);
-                            while ($query->have_posts()) : $query->the_post();
-                    ?>
-                        <div class="item <?php if ($post->ID == 1865 ) echo 'hot-eigth'; ?> <?php if ($post->ID == 2094) echo 'hot-eigth'; ?> <?php if ($post->ID == 2568) echo 'hot-eigth'; ?> <?php if ($post->ID == 1653) echo 'active'; ?>  " style="background: url('<?php echo get_field('main-banner-img'); ?>') center center no-repeat; background-size: cover;">
-                            <div class="container m-caption-wrap">
-                                <div class="carousel-caption">
-                                  <?php if($post->ID == 1653) : ?>
-                                    <h1><?php echo get_field('main-banner-head'); ?></h1><br>
-
-                                  <?php else : ?>
-                                    <h2><?php echo get_field('main-banner-head'); ?></h2><br>
-
-                                  <?php endif; ?>
-
-                                    <p><?php echo get_field('main-banner-description'); ?></p><br>
-                                    <?php if (get_field('main-banner-link')) : ?>
-                                        <a class="btn btn-lg btn-primary" href="<?php echo get_field('main-banner-link'); ?>" role="button">Узнать больше</a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
-                </div>
-                <a class="left carousel-control" href="#bannerCarousel" role="button" data-slide="prev">
-                    <i class="fa fa-chevron-left fa-2x"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#bannerCarousel" role="button" data-slide="next">
-                    <i class="fa fa-chevron-right fa-2x"></i>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    <?php include(TEMPLATEPATH . '/template-parts/banners/main-page-banner.php'); ?>
+  </div>
   <!-- end: Баннеры -->
 
   <!-- start: Верхняя форма -->
@@ -84,7 +40,7 @@
   <?php include(TEMPLATEPATH . '/template-parts/offers/content-offers.php'); ?>
   <!-- /Варианты приобретения квартиры -->
 
-  <div class="row">
+  <div class="row hidden-xs">
     <div class="container" >
 
       <!-- start: Вопрос-ответ -->
@@ -161,16 +117,29 @@
 
       <!-- start: Последние новости -->
       <div class="row">
-      <section class="sections-style hidden-xs">
-        <h2 class="sections-h2 text-center">Свежие новости</h2>
-        <div class="clearfix"></div>
+        <section class="sections-style hidden-xs">
+          <h2 class="sections-h2 text-center">Свежие новости</h2>
+          <div class="clearfix"></div>
 
-        <?php include(TEMPLATEPATH . '/template-parts/news/news_main.php'); ?>
+          <?php include(TEMPLATEPATH . '/template-parts/news/news_main.php'); ?>
 
-        <div class="clearfix"></div>
-      </section>
-    </div>
+          <div class="clearfix"></div>
+        </section>
+      </div>
       <!-- end: Последние новости -->
+
+      <!-- start: Последние новости xs-->
+      <div class="row">
+        <section class="sections-style visible-xs">
+          <h2 class="sections-h2 text-center">Свежие новости</h2>
+          <div class="clearfix"></div>
+
+          <?php include(TEMPLATEPATH . '/template-parts/news/news-content-xs.php'); ?>
+
+          <div class="clearfix"></div>
+        </section>
+      </div>
+      <!-- start: Последние новости xs-->
 
       <!-- start: Сертефикаты -->
       <div class="row">
@@ -203,7 +172,6 @@
     </div>
   </div>
   <!-- end: Нижняя форма -->
-
   <!-- start: Карта -->
   <div class="row">
       <section class="map_main">

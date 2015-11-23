@@ -1,0 +1,22 @@
+#partners-carusel {
+  width: 90%;
+  margin: 25px auto 25px auto;
+  .owl-item {
+    height: 150px;
+    position: relative;
+    img {
+      width: 75%;
+      vertical-align: middle;
+      display: block;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translate(0,-50%);
+      @include media-query(480px) {
+        width: 50%;
+      }
+    }
+  }
+}

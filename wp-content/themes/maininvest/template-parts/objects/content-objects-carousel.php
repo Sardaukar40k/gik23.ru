@@ -37,7 +37,7 @@
 
     <div class="clearfix"></div>
 
-      <a href="obekty/" class="objects_list-more-link">Все объекты</a>
+      <!-- <a href="obekty/" class="objects_list-more-link">Все объекты</a> -->
 
   </section>
 

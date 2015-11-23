@@ -1,15 +1,20 @@
 .main-form {
+  @include background-image($main-form-bg);
   position: relative;
   padding: 15px 0 0 0;
   border: 1px solid #bfbfbf;
   margin: 20px auto 0;
-  @include background-image($main-form-bg);
   background-repeat: repeat;
   text-align: center;
   &:after {
     @include block-shadow(44px);
     opacity: .7;
   }
+  
+  @include media-query($content-width/2) {
+    background: $color_form-xs-bg;
+  }
+  
   h2 {
     font-size: 22px !important;
     font-weight: 500;
@@ -32,8 +37,6 @@
     background: #fff;
     border: 1px solid #4d4d4d;
     box-shadow: 0 0 3px 3px #dddddd inset;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     &:focus {
       outline: none;
@@ -41,7 +44,7 @@
     &.name {
       background: #fff url('img/name-icon.png') 3% 45% no-repeat;
     }
-    /* --- media $content-width --- */
+
     @media(max-width: $content-width) {
       float: none;
       width: 60%;
@@ -68,16 +71,9 @@
     box-shadow: 0 0 0 3px rgba(0,0,0,.15);
     border: none;
     border-bottom: 4px solid #972428;
-    -webkit-background-size: cover;
     background-size: cover;
-    -webkit-transition: .1s .1s ease-in-out;
-    -o-transition: .1s .1s ease-in-out;
     transition: .1s .1s ease-in-out;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     &:focus {
       outline: none;
@@ -260,8 +256,6 @@
       background: #fff;
       border: 1px solid #4d4d4d;
       box-shadow: 0 0 3px 3px #dddddd inset;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
       border-radius: 3px;
       &:focus {
         outline: none;
@@ -290,16 +284,9 @@
       box-shadow: 0 0 0 3px rgba(0, 0, 0, .15);
       border: none;
       border-bottom: 4px solid #972428;
-      -webkit-background-size: cover;
       background-size: cover;
-      -webkit-transition: .1s .1s ease-in-out;
-      -o-transition: .1s .1s ease-in-out;
       transition: .1s .1s ease-in-out;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
       border-radius: 5px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       &:focus {
         outline: none;
@@ -341,10 +328,15 @@
     }
   }
 }
+
 .form {
   &_top_front-page {
     width: 85%;
     margin-top: -30px;
+    @include media-query($content-width/2) {
+      width: 100%;
+      margin: 20px auto 20px;
+    }
   }
   &_bottom {
     width: 85%;

@@ -9,10 +9,11 @@
     position: static;
     text-align: center;
     height: auto;
+    background: $main-background;
   }
   img {
     @media (max-width: 480px) {
-      margin-bottom: 15px;
+      margin: 20px auto;
     }
   }
   &__social-button {
@@ -53,10 +54,6 @@
       margin-top: 10%;
     }
     .modal-content {
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      -o-border-radius: 0;
       border-radius: 0 !important;
     }
   }

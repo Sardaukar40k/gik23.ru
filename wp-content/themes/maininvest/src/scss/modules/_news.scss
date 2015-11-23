@@ -90,6 +90,10 @@
   img {
     width: 100%;
     margin-bottom: 18px;
+    @include media-query($content-width/2) {
+      width: 80%;
+      margin: 0 auto 20px;
+    }
   }
   &-content {
     .post-info {
@@ -101,6 +105,11 @@
     p {
       font-size: 12px !important;
       min-height: 85px;
+      @include media-query(480px) {
+        padding: 0;
+        height: auto;
+        min-height: auto;
+      }
     }
     h2 {
       font-weight: bold;
@@ -124,6 +133,10 @@
       &:hover {
         text-decoration: none;
       }
+    }
+    @include media-query(480px) {
+      width: 80%;
+      margin: 0 auto 40px;
     }
   }
 }
