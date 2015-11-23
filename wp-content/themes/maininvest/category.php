@@ -1,30 +1,46 @@
+
 <?php get_header(); ?>
-    <div class="container posts">
-        <div class="row">
-            <div class="col-md-12 page-logo">
+
+<div class="container">
+    <div class="row">
+
+        <section class="posts">
+
+            <!-- Миниатюра -->
+            <div class="page-logo">
                 <?php echo category_description(); ?>
             </div>
-        </div>
-        <!-- Хлебные крошки -->
-        <?php get_template_part('content', 'breadcrumbs'); ?>
-        <!-- /Хлебные крошки -->
-        <div class="row">
-            <section class="blog-header col-md-12 text-center sections-style">
+            <!-- /Миниатюра -->
+
+            <!-- Хлебные крошки -->
+            <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+            <!-- /Хлебные крошки -->
+
+            <!-- Заголовок страницы -->
+            <div class="blog-header sections-style">
                 <h1><?php single_cat_title(); ?></h1>
-            </section>
-        </div>
-        <div class="row">
+            </div>
+            <!-- /Заголовок страницы -->
+
+            <!-- Список категорий -->
             <div class="col-md-2">
-                <?php get_template_part('content', 'categories'); ?>
+                <?php include(TEMPLATEPATH . '/template-parts/blog/categories-list.php'); ?>
             </div>
-            <!-- Цикл -->
+            <!-- /Список категорий -->
+
+            <!-- Цикл записей -->
             <div class="col-md-10">
-               <?php get_template_part('content', 'category'); ?>
+                <?php include(TEMPLATEPATH . '/template-parts/blog/loop_archive.php') ?>
             </div>
-            <!-- /Цикл -->
-        </div>
-        <!-- Номера страниц -->
-        <?php get_template_part('content', 'pagination'); ?>
-        <!-- /Номера страниц -->
+            <!-- /Цикл записей -->
+
+            <!-- Пагинация -->
+            <?php include(TEMPLATEPATH . '/template-parts/pagination/content-pagination.php'); ?>
+            <!-- /Пагинация -->
+
+        </section>
+
     </div>
+</div>
+
 <?php get_footer(); ?>

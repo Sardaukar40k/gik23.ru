@@ -59,7 +59,7 @@
             <div class="header_new-info-contacts">
               <section class="header_new-info-contacts-phone">
                 <p><span>8 800 </span>250 83 38</p>
-                <p><span>8 861 </span>203 83 38</p>
+                <p><span>8 861 </span>203 38 38</p>
               </section>
               <section class="header_new-info-contacts-opening-time">
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/time.png" alt="Время работы строительной компании ГИК - Краснодар">
