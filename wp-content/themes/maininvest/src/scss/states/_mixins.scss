@@ -6,11 +6,7 @@
   background: url('img/shadow-top.png') no-repeat center center;
   position: absolute;
   right: 0;
-  -webkit-opacity: .4;
-  -moz-opacity: .4;
-  -ms-opacity: .4;
-  -o-opacity: .4;
-  opacity: .4;
+  opacity: 0.4;
   bottom: -$bottom;
 }
 
@@ -29,13 +25,8 @@
   box-shadow: 0 0 0 3px rgba(0,0,0,.15);
   border: none;
   border-bottom: 4px solid #972428;
-  -webkit-background-size: cover;
   background-size: cover;
-  -webkit-transition: .1s .1s ease-in-out;
-  -o-transition: .1s .1s ease-in-out;
-  transition: .1s .1s ease-in-out;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  transition: 0.1s 0.1s ease-in-out;
   border-radius: 5px;
   &:hover {
     color: #fff;
@@ -76,7 +67,6 @@
 
 @mixin headers--big($bg-url) {
   background: url($bg-url) center center no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
   width: 100%;
   text-align: left;

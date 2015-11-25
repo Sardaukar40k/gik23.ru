@@ -1,26 +1,52 @@
+
 <?php get_header(); ?>
-<div class="container single-news-page">
+
+<div class="container">
+
+  <section class="page_single">
+
     <!-- Хлебные крошки -->
-    <?php get_template_part('content', 'breadcrumbs'); ?>
-    <!-- /Хлебные крошки -->
     <div class="row">
+
+      <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+
+    </div>
+    <!-- /Хлебные крошки -->
+
+    <!-- Тело поста -->
+    <div class="row">
+
         <!-- Список категорий -->
         <div class="col-md-3">
-            <?php get_template_part('content', 'categories'); ?>
+            <?php include(TEMPLATEPATH . '/template-parts/blog/categories-list.php'); ?>
         </div>
         <!-- /Список категорий -->
-        <!-- Запись -->
+
+        <!-- Пост -->
         <div class="col-md-9">
-            <?php get_template_part('content', 'single-news'); ?>
+            <?php include(TEMPLATEPATH . '/template-parts/blog/content-single-post.php'); ?>
         </div>
-        <!-- /Запись -->
+        <!-- /Пост -->
+
     </div>
+    <!-- /Тело поста -->
+
+    <!-- Комментарии -->
     <div class="row">
-        <!-- Комментарии -->
-        <div class="col-md-9 col-md-offset-3 single-news-comments">
-            <?php comments_template(); ?>
-        </div>
-        <!-- /Комментарии -->
+      <div class="col-md-9 col-md-offset-3">
+
+        <section class="single-news-comments">
+          <?php comments_template(); ?>
+        </section>
+
+      </div>
     </div>
+    <!-- /Комментарии -->
+
+  </section>
+
 </div>
+
 <?php get_footer(); ?>
+
+

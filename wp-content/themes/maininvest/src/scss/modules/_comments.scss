@@ -132,3 +132,10 @@
     font-weight: bold;
   }
 }
+
+.single-news-comments {
+  @media screen and (max-width: 480px) {
+    padding: 0 15px;
+  }
+}
+
