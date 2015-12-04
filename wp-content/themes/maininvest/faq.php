@@ -1,9 +1,11 @@
 <?php /*Template Name: F.A.Q.*/ ?>
 <?php get_header(); ?>
 <div class="container page">
-    <!-- Хлебные крошки -->
-    <?php get_template_part('content', 'breadcrumbs'); ?>
-    <!-- /Хлебные крошки -->
+  <!-- Хлебные крошки -->
+  <div class="row">
+    <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+  </div>
+  <!-- /Хлебные крошки -->
     <div class="row">
         <section class="col-md-12 page-content">
                  <div class="row faq">

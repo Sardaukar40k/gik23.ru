@@ -7,9 +7,11 @@
             <?php the_post_thumbnail(); ?>
         </div>
     </div>
-    <!-- Хлебные крошки -->
-    <?php get_template_part('content', 'breadcrumbs'); ?>
-    <!-- /Хлебные крошки -->
+  <!-- Хлебные крошки -->
+  <div class="row">
+    <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+  </div>
+  <!-- /Хлебные крошки -->
     <div class="row">
         <section class="contacts-header col-md-12 text-center">
             <?php the_title( '<h1>', '</h1>'); ?>

@@ -1,5 +1,5 @@
 <?php /*Template Name: Ремонты*/ ?>
-<?php get_header('repairs'); ?>
+<?php get_header(); ?>
 <div class="container-fluid page repairs">
 
   <!-- start: шапка страницы с большим баннером -->
@@ -19,9 +19,11 @@
 
   <div class="row">
     <div class="container">
-      <!-- start: хлебные крошки -->
-      <?php get_template_part('content', 'breadcrumbs'); ?>
-      <!-- end: Хлебные крошки -->
+      <!-- Хлебные крошки -->
+      <div class="row">
+        <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+      </div>
+      <!-- /Хлебные крошки -->
     </div>
   </div>
 
@@ -55,7 +57,7 @@
         <div class="repairs__services__item item-1">
           <div class="repairs__services__item__head">
             <h3>Стандарт</h3>
-            <p><strong>4953 руб. за м2<sup>2</sup></strong><br>Материалы предоставляются подрядчиком</p>
+            <p><strong>5310 руб. за м2<sup>2</sup></strong><br>Материалы предоставляются подрядчиком</p>
           </div>
           <div class="repairs__services__item__body">
             <ul>

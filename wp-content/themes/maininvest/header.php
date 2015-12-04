@@ -42,9 +42,10 @@
 </script>
 <!-- End Google Tag Manager -->
 
-<div class="container-fluid">
-  <div class="row">
-    <header class="header_new">
+<!-- head -->
+<header class="header_new">
+  <div class="container-fluid">
+    <div class="row">
       <div class="container">
 
         <!-- Info -->
@@ -57,14 +58,26 @@
             </div> <!-- /.header_new-info-logo -->
 
             <div class="header_new-info-contacts">
+
               <section class="header_new-info-contacts-phone">
-                <p><span>8 800 </span>250 83 38</p>
-                <p><span>8 861 </span>203 38 38</p>
+
+                <?php if( is_page(2424) ) : // если страница "Ремонты" - выводить другой номер телефона ?>
+
+                  <p><span>8 988 </span>473-00-67</p>
+
+                <?php else : ?>
+
+                  <p><span>8 800 </span>250 83 38</p>
+                  <p><span>8 861 </span>203 38 38</p>
+
+                <?php endif; ?>
+
               </section>
+
               <section class="header_new-info-contacts-opening-time">
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/time.png" alt="Время работы строительной компании ГИК - Краснодар">
-                <p><span>пн-пт:</span> 9:00 - 20:00</p>
-                <p><span>сб-вс:</span> 10:00 - 18:00</p>
+                  <p><span>пн-пт:</span> 9:00 - 20:00</p>
+                  <p><span>сб-вс:</span> 10:00 - 18:00</p>
               </section>
 
             </div> <!-- /.header_new-info-phone -->
@@ -73,6 +86,15 @@
           </section>
         </div>
         <!-- /Info -->
+
+      </div>
+    </div>
+  </div>
+
+  <section class="menu-default" id="menu">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
 
         <!-- Menu -->
         <div class="row">
@@ -126,8 +148,11 @@
         <!-- /Menu -->
 
       </div>
-    </header>
+    </div>
   </div>
-</div>
+  </section>
+
+</header>
+<!-- /head -->
 
 <div id="wrapper">

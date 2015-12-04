@@ -37,7 +37,7 @@ if (!class_exists("nxs_class_SNAP_SU")) { class nxs_class_SNAP_SU {
       $contents = $response['body']; $ckArr = $response['cookies']; //$response['body'] = htmlentities($response['body']);  prr($response);    die();       
       $flds  = array(); $flds['username'] = $u; $flds['password'] = $p;
       $hdrsArr = $this->nxs_getSUHeaders('https://www.stumbleupon.com', true, true);
-      $r2 = wp_remote_post( 'https://www.stumbleupon.com/api/v2_0/auth/login ', array( 'method' => 'POST', 'timeout' => 45, 'redirection' => 0,  'headers' => $hdrsArr, 'body' => $flds, 'cookies' => $ckArr));
+      $r2 = wp_remote_post( 'https://www.stumbleupon.com/api/v2_0/auth/login', array( 'method' => 'POST', 'timeout' => 45, 'redirection' => 0,  'headers' => $hdrsArr, 'body' => $flds, 'cookies' => $ckArr));
       //prr($flds); prr($ckArr); prr($r2); prr($ckArr); 
       if (is_wp_error($r2)) { nxs_addToLogN('E', 'Error', $logNT, '-=ERROR=- '.print_r($r2, true), ''); return "Connection ERROR (2). Please see log";}
       if (stripos($r2['body'],',"_error":"Invalid username') !==false ) { nxs_addToLogN('E', 'Error', $logNT, '-=ERROR=- '.print_r($r2['body'], true), ''); return "Invalid username or password";} 

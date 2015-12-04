@@ -1,7 +1,7 @@
 <?php
   $args = array (
     'post_type' => 'tenders',
-    'numberposts' => 5,
+    'numberposts' => -1,
     'post-_status' => 'publish'
   );
 

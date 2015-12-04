@@ -21,7 +21,9 @@
   <div class="row">
     <div class="container">
       <!-- Хлебные крошки -->
-      <?php get_template_part('content', 'breadcrumbs'); ?>
+      <div class="row">
+        <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+      </div>
       <!-- /Хлебные крошки -->
 
       <!-- 5 шагов -->
@@ -82,9 +84,15 @@
       </section>
       <!-- /Причины -->
 
-      <!-- Комплексы -->
-      <?php get_template_part('content', 'objects'); ?>
-      <!-- Комплексы -->
+      <!-- start: Карусель объектов -->
+      <div class="row">
+        <div class="container">
+          <?php $title = 'Выберите свою квартиру'; ?>
+          <?php include(TEMPLATEPATH . '/template-parts/objects/content-objects-carousel.php'); ?>
+
+        </div>
+      </div>
+      <!-- end: Карусель объектов -->
 
       <!-- start: Партнёры -->
       <?php

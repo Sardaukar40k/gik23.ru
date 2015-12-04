@@ -17,7 +17,12 @@ if (!class_exists("nxs_class_SNAP_VK")) { class nxs_class_SNAP_VK {
       if (!empty($thumbUploadUrl)) { $thumbUploadUrlObj = json_decode($thumbUploadUrl); $VKuploadUrl = $thumbUploadUrlObj->response->upload_url; }   // prr($thumbUploadUrlObj); echo "UURL=====-----";
       if (!empty($VKuploadUrl)) {    
         // if (stripos($VKuploadUrl, '//pu.vkontakte.ru/c')!==false) { $c = 'c'.CutFromTo($VKuploadUrl, '.ru/c', '/'); $VKuploadUrl = str_ireplace('/pu.','/'.$c.'.',str_ireplace($c.'/','',$VKuploadUrl)); }
-        $remImgURL = urldecode($imgURL); $urlParced = pathinfo($remImgURL); $remImgURLFilename = $urlParced['basename']; $imgData = wp_remote_get($remImgURL); $imgData = $imgData['body'];        
+        $remImgURL = urldecode($imgURL); $urlParced = pathinfo($remImgURL); $remImgURLFilename = $urlParced['basename']; $imgData = wp_remote_get($remImgURL); 
+        if(is_wp_error($imgData) || empty($imgData['body']) || (!empty($imgData['headers']['content-length']) && (int)$imgData['headers']['content-length']<200) || 
+          $imgData['headers']['content-type'] == 'text/html' ||  $imgData['response']['code'] == '403' ) { $options['attchImg'] = 0; 
+            nxs_addToLogN('E','Error',$logNT,'Could not get image ( '.$remImgURL.' ), will post without it - ', print_r($imgData, true)); return 'Image Upload Error, please see log';
+        } $imgData = $imgData['body'];        
+        
         $tmp=array_search('uri', @array_flip(stream_get_meta_data($GLOBALS[mt_rand()]=tmpfile())));  
         if (!is_writable($tmp)) return "Your temporary folder or file (file - ".$tmp.") is not writable. Can't upload image to VK";
         rename($tmp, $tmp.='.png'); register_shutdown_function(create_function('', "unlink('{$tmp}');"));       
@@ -37,7 +42,7 @@ if (!class_exists("nxs_class_SNAP_VK")) { class nxs_class_SNAP_VK {
           $postUrl = 'https://api.vkontakte.ru/method/photos.saveWallPhoto?server='.$uploadResultObj->server.'&photo='.$uploadResultObj->photo.'&hash='.$uploadResultObj->hash.'&gid='.(str_replace('-','',$options['pgIntID'])).'&access_token='.$options['vkAppAuthToken'];
           $response = wp_remote_get($postUrl);            
           $resultObject = json_decode($response['body']); //prr($resultObject);
-          if (isset($resultObject) && isset($resultObject->response[0]->id)) { return $resultObject->response[0]; } else { return false; }
+          if (isset($resultObject) && isset($resultObject->response[0]->id)) { return $resultObject->response[0]; } else { return 'Image Upload Error'; }
         }
       }
     }

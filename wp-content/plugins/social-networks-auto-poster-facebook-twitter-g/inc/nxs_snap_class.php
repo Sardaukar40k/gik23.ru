@@ -20,7 +20,7 @@ if (!class_exists("NS_SNAutoPoster")) {
             $pf = $dir.$nxs_UPPath.'/'.$nxs_UPPath.'.php'; if (file_exists($pf) && !function_exists('nxs_getInitAdd') ) require_once $pf;          
             if ($nxs_isWPMU && $blog_id>1) { global $wpdb;  switch_to_blog(1); //$dbMUOptions = get_option($this->dbOptionsName);  
               $row = $wpdb->get_row("SELECT option_value from ".$wpdb->options." WHERE option_name='NS_SNAutoPoster'"); if ( is_object( $row ) ) $dbMUOptions = maybe_unserialize($row->option_value);
-              if (function_exists('nxs_getInitAdd')) nxs_getInitAdd($dbMUOptions); restore_current_blog(); 
+              if (function_exists('nxs_getInitAdd')) nxs_getInitAdd($dbMUOptions); if (function_exists("restore_current_blog")) restore_current_blog(); 
               $dbOptions['lk'] = $dbMUOptions['lk']; $dbOptions['ukver'] = $dbMUOptions['ukver']; $dbOptions['uklch'] = $dbMUOptions['uklch']; $dbOptions['uk'] = $dbMUOptions['uk'];
             }            
             if (!empty($dbOptions) && is_array($dbOptions)) foreach ($dbOptions as $key => $option) if (trim($key)!='') $options[$key] = $option; 

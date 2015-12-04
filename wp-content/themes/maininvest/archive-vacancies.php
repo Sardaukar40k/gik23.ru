@@ -15,13 +15,17 @@
   </div>
   <!-- end: шапка страницы с большим баннером -->
 
-  <!-- start: хлебные крошки -->
+
   <div class="row">
     <div class="container">
-      <?php get_template_part('content', 'breadcrumbs'); ?>
+      <div class="row">
+        <!-- хлебные крошки -->
+        <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+        <!-- /Хлебные крошки -->
+      </div>
     </div>
   </div>
-  <!-- end: Хлебные крошки -->
+
   <div class="row">
     <div class="container vacancies__content">
       <!-- start: список коммерческих объектов -->

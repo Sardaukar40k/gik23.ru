@@ -37,7 +37,8 @@
         </span>
       <!-- /Кол-во. просмотров -->
     </p> <!-- /.post-body-info -->
-      <!-- start: мета-ифнормация о записи -->
+
+      <!-- мета-ифнормация о записи -->
     <div class="pluso pluso-news" data-background="transparent" data-options="small,square,line,horizontal,nocounter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google"></div>
 
       <!-- Изображение -->

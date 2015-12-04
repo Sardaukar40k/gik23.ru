@@ -4,8 +4,8 @@ Contributors: NextScripts
 Donate link: http://www.nextscripts.com/social-networks-auto-poster-for-wordpress
 Tags: automation, autopost, auto-post, auto post, socialnetworks, socialnetwork, social networks, social network, facebook, Flipboard, google, google+, Flickr, twitter, google plus, pinterest, tumblr, blogger, blogspot, blogpost, linkedin, delicious, delicious.com, reddit, reddit.com, plugin, links, Post, posts, api, automatic, seo, scoop.it, integration, bookmark, bookmarks, admin, images, image, social, sharing, share, repost, re-post, wordpress.com, StumbleUpon, Diigo, vBulletin, Plurk, forums, vKontakte, open graph, LiveJournal, SETT, YouTube, Kippt, xing
 Requires at least: 3.4
-Tested up to: 4.3.1
-Stable tag: 3.4.27
+Tested up to: 4.4.0
+Stable tag: 3.4.29
 License: GPLv2 or later
 
 Automatically re-publishes blogposts to Facebook, Twitter, Google+, Pinterest, LinkedIn, Blogger, Tumblr, Delicious, Plurk, etc profiles and/or pages
@@ -167,6 +167,17 @@ Please see more <a href="http://www.nextscripts.com/faq/">Frequently asked quest
 4. Google+: Types of Post 
 
 == Changelog ==
+
+= 3.4.29 [11/24/2015] =
+
+* Bug Fix - [Critical] Fix for "Call to undefined function restore_current_blog()" error on some messed up WordPress installations.
+
+= 3.4.28 [11/23/2015] =
+
+* Improvement - Better compatibility with TinyMCE Advanced.
+* Bug Fix - get_the_excerpt was called with an argument that is deprecated
+* Bug Fix - [LinkedIn] Fix for: LinkedIn Groups - "Error: No posting form found on..." 
+* Improvement - LinkedIn is slowly rolling out new interface for groups. That new interface is bringing support for "Image" posts to groups. This release adds it to the SNAP as well. (Will work only if you already got new Interface)
 
 = 3.4.27 [11/02/2015] =
 

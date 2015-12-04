@@ -5,9 +5,11 @@
             <?php the_post_thumbnail(); ?>
         </div>
     </div>
-    <!-- Хлебные крошки -->
-    <?php get_template_part('content', 'breadcrumbs'); ?>
-    <!-- /Хлебные крошки -->
+  <!-- Хлебные крошки -->
+  <div class="row">
+    <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+  </div>
+  <!-- /Хлебные крошки -->
     <div class="row">
         <section class="comments-content container">
             <h1>Отзывы клиентов ООО "ГИК"</h1>

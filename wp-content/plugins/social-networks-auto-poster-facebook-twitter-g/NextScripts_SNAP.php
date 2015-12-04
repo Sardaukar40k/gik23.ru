@@ -4,12 +4,13 @@ Plugin Name: NextScripts: Social Networks Auto-Poster
 Plugin URI: http://www.nextscripts.com/social-networks-auto-poster-for-wordpress
 Description: This plugin automatically publishes posts from your blog to multiple accounts on Facebook, Twitter, and Google+ profiles and/or pages.
 Author: Next Scripts
-Version: 3.4.27
+Version: 3.4.29
 Author URI: http://www.nextscripts.com
 Text Domain: nxs_snap
 Copyright 2012-2015  Next Scripts, Inc
 */
-define( 'NextScripts_SNAP_Version' , '3.4.27' );
+define( 'NextScripts_SNAP_Version' , '3.4.29' );
+
 
 $nxs_mLimit = ini_get('memory_limit'); if (strpos($nxs_mLimit, 'G')) {$nxs_mLimit = (int)$nxs_mLimit * 1024;} else {$nxs_mLimit = (int)$nxs_mLimit;}
   if ($nxs_mLimit>0 && $nxs_mLimit<64) { add_filter('plugin_action_links','ns_add_nomem_link', 10, 2 );
@@ -244,7 +245,7 @@ if (!function_exists("nxs_snapPublishTo")) { function nxs_snapPublishTo($postArr
         } else { nxs_addToLogN('GR', 'Skipped', $avNt['name'].' ('.$optMt['nName'].')', '-=[Unchecked Account]=- - PostID:'.$postID.'' ); }
       }                   
     } } } else { nxs_addToLogN('I', 'Skipped', '', 'Excluded Post Type: '.$post->post_type.' (Post ID: '.$postID.')| NOT IN ('.print_r($nxsCPTSeld, true).')| ALL ('.print_r($post_types, true).')' ); return; }
-   if ($isS) restore_current_blog(); 
+   global $isS; if ($isS && function_exists("restore_current_blog")) restore_current_blog(); 
 }} 
 
 //## Add settings link to plugins list
@@ -300,7 +301,7 @@ function nxs_ogtgCallback($content){ global $post, $plgn_NS_SNAutoPoster;
     $prcRes = preg_match( '/<meta name="description" content="(.*)"/', $content, $description_matches );    
     if ( $prcRes !== false && count( $description_matches ) == 2 ) $ogD = '<meta property="og:description" content="' . $description_matches[1] . '" />'."\r\n"; {
       if (!empty($post) && is_object($post) && is_singular()) {
-        if(has_excerpt($post->ID))$ogD=strip_tags(nxs_snapCleanHTML(get_the_excerpt($post->ID)));else $ogD= str_replace("  ", ' ', str_replace("\r\n", ' ', trim(substr(strip_tags(nxs_snapCleanHTML(strip_shortcodes($post->post_content))), 0, 200))));
+        if(has_excerpt($post->ID))$ogD=strip_tags(nxs_snapCleanHTML($post->post_excerpt));else $ogD= str_replace("  ", ' ', str_replace("\r\n", ' ', trim(substr(strip_tags(nxs_snapCleanHTML(strip_shortcodes($post->post_content))), 0, 200))));        
       } else $ogD = get_bloginfo('description');  $ogD = preg_replace('/\r\n|\r|\n/m','',$ogD); 
       $ogD = '<meta property="og:description" content="'.esc_attr( apply_filters( 'nxsog_desc', $ogD ) ).'" />'."\r\n";          
     }    

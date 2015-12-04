@@ -59,7 +59,7 @@
             <h1>Квартиры с видом<br>
               на будущее</h1>
             <div class="phone hidden-xs">
-              <p>8 861 203 38 38</p>
+              <p>8 861 299 61 84</p>
               <a href="" data-toggle="modal" data-target="#modal-form">Заказать звонок</a>
             </div>
           </section>

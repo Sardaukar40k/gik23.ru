@@ -183,10 +183,12 @@ if (!function_exists("jsPostToSNAP")) { function jsPostToSNAP() {  global $nxs_s
     }    
     function nxs_getOriginalWidthOfImg(img_element) { var t = new Image();  t.src = (img_element.getAttribute ? img_element.getAttribute("src") : false) || img_element.src; /* alert(t.src+" | "+t.width); */ return t.width; }        
     function nxs_updateGetImgs(e){ 
-        var textOut='';
+        var textOut=''; var text = '';
         var tId = e.target.id; 
         var tIdN = tId.replace("isAutoImg-", "");
-        if ( tinymce.activeEditor ) text = tinymce.activeEditor.getContent(); else text = jQuery('#content').val();                
+        if ( tinymce.activeEditor ) text = tinymce.activeEditor.getContent();
+        if ( text == '' ) text = jQuery('#content').val();                
+        
         jQuery('#NS_SNAP_AddPostMetaTags').append('<div id="nxs_tempDivImgs" style="display: none;"></div>'); jQuery('#nxs_tempDivImgs').append(text);
         var textOutA = new Array(); var currSelImg =  jQuery("#imgToUse-"+tIdN).val();
                 
@@ -505,7 +507,7 @@ if (!function_exists('nxs_checkAddLogTable')){ function nxs_checkAddLogTable(){ 
   ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";
   require_once(ABSPATH . 'wp-admin/includes/upgrade.php'); dbDelta($sql);
   delete_option("nxs_log_db_table_version"); add_option("nxs_log_db_table_version", '1.1');
-  if($nxs_tpWMPU=='S') restore_current_blog();
+  if($nxs_tpWMPU=='S' && function_exists("restore_current_blog")) restore_current_blog();
 }}
 if (!function_exists('nxs_getnxsLog')){ function nxs_getnxsLog(){ global $nxs_tpWMPU, $wpdb; if($nxs_tpWMPU=='S') switch_to_blog(1);  
    $log = $wpdb->get_results( "SELECT * FROM ". $wpdb->prefix . "nxs_log ORDER BY id", ARRAY_A ); if (!is_array($log)) return array(); else return $log;
@@ -528,7 +530,7 @@ if (!function_exists('nxs_addToLogN')){ function nxs_addToLogN ($type, $action, 
   // $nxsDBLog = get_option('NS_SNAutoPosterLog'); $nxsDBLog = maybe_unserialize($nxsDBLog); if(!is_array($nxsDBLog)) $nxsDBLog = array(); $nxsDBLog[] = $logItem; $nxsDBLog = array_slice($nxsDBLog, -150);  
   // $res = update_option('NS_SNAutoPosterLog', ($nxsDBLog));   
   //delete_option('NS_SNAutoPosterLog'); add_option('NS_SNAutoPosterLog', ($nxsDBLog));   
-  if($nxs_tpWMPU=='S') restore_current_blog(); 
+  if($nxs_tpWMPU=='S' && function_exists("restore_current_blog")) restore_current_blog(); 
 }}
 
 
@@ -1149,7 +1151,7 @@ function nxs_do_this_hourly() {  $options = get_option('NS_SNAutoPoster');
   } 
 }
 
-if (!function_exists('nxsClnCookies')){ function nxsClnCookies($ck) { $ckOut = array(); $t =time(); foreach ($ck as $c) { if ($c->value!='deleted' && $c->expires>$t) $ckOut[] = $c; } return $ckOut; }}
+if (!function_exists('nxsClnCookies')){ function nxsClnCookies($ck) { $ckOut = array(); $t =time(); foreach ($ck as $c) { if ($c->value!='deleted' && $c->value!='deleteMe' && $c->value!='delete me' && $c->expires>$t) $ckOut[] = $c; } return $ckOut; }}
 
 //#### V3 new Query Poster
 function nxs_addToPostingQuery($postID){ global $plgn_NS_SNAutoPoster; if (!isset($plgn_NS_SNAutoPoster)) return; $options = $plgn_NS_SNAutoPoster->nxs_options; 

@@ -13,7 +13,9 @@
       </div>
 
       <!-- Хлебные крошки -->
-      <?php get_template_part('content', 'breadcrumbs'); ?>
+      <div class="row">
+        <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+      </div>
       <!-- /Хлебные крошки -->
 
       <section class="reviews" role="main">

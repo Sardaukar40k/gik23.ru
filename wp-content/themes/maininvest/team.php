@@ -1,4 +1,4 @@
-<?php /*Template Name: Команда*/ ?>
+
 <?php get_header(); ?>
 
 <div class="container">

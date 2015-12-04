@@ -18,7 +18,11 @@
   <!-- start: хлебные крошки -->
   <div class="row">
     <div class="container">
-      <?php get_template_part('content', 'breadcrumbs'); ?>
+      <!-- Хлебные крошки -->
+      <div class="row">
+        <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+      </div>
+      <!-- /Хлебные крошки -->
     </div>
   </div>
   <!-- end: Хлебные крошки -->

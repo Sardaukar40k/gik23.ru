@@ -245,8 +245,9 @@ if (!function_exists("nxs_doPublishToTW")) { //## Second Function to Post to TW
       if(trim($imgURL)=='') $options['attchImg'] = 0; else { $imgURL = str_replace(' ', '%20', $imgURL);
         $hdrsArr['User-Agent']='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0'; $advSet=array('headers'=>$hdrsArr,'httpversion'=>'1.1','timeout'=>45,'sslverify'=>false);              
         $imgData = wp_remote_get($imgURL, $advSet); 
-        if(is_wp_error($imgData) || empty($imgData['body']) || (!empty($imgData['headers']['content-length']) && (int)$imgData['headers']['content-length']<200)) { $options['attchImg'] = 0; 
-          nxs_addToLogN('E','Error',$logNT,'Could not get image ('.$imgURL.'), will post without it - Error:'.print_r($imgData, true), $extInfo); 
+        if(is_wp_error($imgData) || empty($imgData['body']) || (!empty($imgData['headers']['content-length']) && (int)$imgData['headers']['content-length']<200) || 
+          $imgData['headers']['content-type'] == 'text/html' ||  $imgData['response']['code'] == '403' ) { $options['attchImg'] = 0; 
+            nxs_addToLogN('E','Error',$logNT,'Could not get image ('.$imgURL.'), will post without it - ', print_r($imgData, true)); 
         } else $imgData = $imgData['body']; 
       }      
     } if ($options['attchImg']=='1' && $imgData!='') $twLim = 116; else $twLim = 140;    

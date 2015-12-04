@@ -20,9 +20,11 @@
     </div>
     <div class="row">
         <div class="container">
-            <!-- Хлебные крошки -->
-            <?php get_template_part('content', 'breadcrumbs'); ?>
-            <!-- /Хлебные крошки -->
+          <!-- Хлебные крошки -->
+          <div class="row">
+            <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+          </div>
+          <!-- /Хлебные крошки -->
             <div class="row">
                 <section class="col-md-10 col-md-offset-1 ipoteka__action--top">
                     <div class="row">

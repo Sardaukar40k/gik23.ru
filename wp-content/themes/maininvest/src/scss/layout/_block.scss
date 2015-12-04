@@ -1,0 +1,21 @@
+.section-block {
+  margin: 0 auto 30px;
+  border-top: 1px solid $gray;
+  text-align: center;
+}
+
+.section-block-header {
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  background: white;
+  padding: 5px 25px;
+  font-size: 25px;
+  top: -0.8em;
+
+  @media screen and (max-width: 480px) {
+    font-size: 18px !important;
+  }
+}
+

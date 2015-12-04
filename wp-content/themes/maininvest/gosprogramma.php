@@ -19,7 +19,9 @@
             <div class="container">
 
                 <!-- Хлебные крошки -->
-                <?php get_template_part('content', 'breadcrumbs'); ?>
+                <div class="row">
+                    <?php include(TEMPLATEPATH . '/template-parts/breadcrumbs/content-breadcrumbs.php'); ?>
+                </div>
                 <!-- /Хлебные крошки -->
 
                 <section class="row sections-style gosprog__about">
