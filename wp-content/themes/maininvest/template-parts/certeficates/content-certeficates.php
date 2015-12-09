@@ -10,7 +10,7 @@
   while ($query->have_posts()) : $query->the_post(); ?>
 
     <a rel="nofollow" href="<?php echo get_field('main-certificate'); ?>">
-      <img src="<?php echo get_field('main-certificate-thumbnail'); ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" width="126">
+      <img class="lazyOwl" data-src="<?php echo get_field('main-certificate-thumbnail'); ?>" src="<?php echo get_field('main-certificate-thumbnail'); ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" width="126">
     </a>
 
   <?php endwhile; ?>

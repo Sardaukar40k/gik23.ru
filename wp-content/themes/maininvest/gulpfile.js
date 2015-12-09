@@ -10,7 +10,15 @@ var gulp = require('gulp'),
 
 /* --- Сборка файла style.css ---*/
 gulp.task('sass', function () {
-  gulp.src(['src/scss/states/_*.scss', 'src/scss/utilities/_*.scss', 'src/scss/base/_*.scss', 'src/scss/layout/_*.scss', 'src/scss/modules/_*.scss'])
+  gulp.src([
+    'libs/bootstrap/dist/css/bootstrap.css',
+    'libs/owl-carousel/owl-carousel/owl.carousel.css',
+    'src/scss/states/_*.scss',
+    'src/scss/utilities/_*.scss',
+    'src/scss/base/_*.scss',
+    'src/scss/layout/_*.scss',
+    'src/scss/modules/_*.scss'
+  ])
     .pipe(concat('style.scss'))
     .pipe(sass({outputStyle : 'expended'}).on('error', sass.logError))
     .pipe(prefixer({ browsers: ['last 10 versions'] }))

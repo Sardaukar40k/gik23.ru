@@ -17,7 +17,7 @@
 
       <!-- Дата публикации -->
       <time class="single-post-info-item" itemprop="datePublished" datetime="<?php the_time('c'); ?>">
-        <i class="fa fa-clock-o"></i>
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/news/time_icon.png" alt="Время публикации записи">
         <?php the_time('j F Y'); ?>,
         <?php the_time(); ?>
       </time>

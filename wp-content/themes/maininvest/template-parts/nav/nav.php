@@ -4,7 +4,7 @@
     <!-- nav-header -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle xs-menu-toggle" data-toggle="collapse" data-target="#main-menu">
-        <i class="fa fa-bars fa-2x"></i>
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav/menu_icon.png" alt="Меню">
       </button>
     </div>
     <!-- /nav-header -->

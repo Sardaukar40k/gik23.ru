@@ -33,11 +33,11 @@
       <?php wp_reset_postdata(); ?>
     </div>
     <a class="left carousel-control" href="#bannerCarousel" role="button" data-slide="prev">
-      <i class="fa fa-chevron-left fa-2x"></i>
-      <span class="sr-only">Previous</span>
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/banners/left.png" alt="Предыдущий слайд">
+      <span class="sr-only">Предыдущий слайд</span>
     </a>
     <a class="right carousel-control" href="#bannerCarousel" role="button" data-slide="next">
-      <i class="fa fa-chevron-right fa-2x"></i>
-      <span class="sr-only">Next</span>
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/banners/right.png" alt="Следующий слайд">
+      <span class="sr-only">Следующий слайд</span>
     </a>
   </div>

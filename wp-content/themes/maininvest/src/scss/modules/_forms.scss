@@ -8,7 +8,7 @@
   text-align: center;
   &:after {
     @include block-shadow(44px);
-    opacity: .7;
+    opacity: 0.7;
   }
   
   @include media-query($content-width/2) {
@@ -196,16 +196,8 @@
     padding: 2px 5px;
   }
 }
-.single-news {
+.single-post {
   .wpcf7 {
-    &:before {
-      content: 'Остались вопросы - задайте их менеджеру';
-      display: block;
-      text-align: center;
-      font-size: 20px;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
     padding: 20px 5px;
     position: relative;
     border: 1px solid #bfbfbf;
@@ -221,7 +213,7 @@
       font-size: 22px;
       font-weight: 500;
       padding: 0;
-      margin: 0 auto 25px 0;
+      margin: 0 auto 15px 0;
     }
     @media (max-width: 725px) {
       &:after {
@@ -352,3 +344,4 @@
     background: url('img/main-faq/pattern_form.png') left top repeat;
   }
 }
+

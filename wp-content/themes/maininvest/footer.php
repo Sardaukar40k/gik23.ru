@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <a itemprop="url" href="<?php echo esc_url( get_home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo-xs.png" class="logo img-responsive" alt="Строительная компания ООО ГИК"></a>
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo-xs.png" class="logo img-responsive" alt="Строительная компания ООО ГИК">
             </div>
             <div class="col-sm-4 text-center">
                 <p>© <span itemprop="copyrightHolder">ООО &quot;Главная Инвестиционная Компания&quot;</span>,<span itemprop="copyrightYear"> 2015</span>.</p>

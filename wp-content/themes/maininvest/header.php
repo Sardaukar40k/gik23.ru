@@ -18,7 +18,7 @@
   <![endif]-->
 
   <!-- Бибилотеки -->
-  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/bootstrap/dist/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri () );?>/libs/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri ());  ?>/libs/owl-carousel/owl-carousel/owl.carousel.css">
   <!-- /Библиотеки -->
@@ -54,7 +54,7 @@
             <div class="clearfix"></div>
 
             <div class="header_new-info-logo">
-              <a href="<?php echo esc_url( get_home_url() ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo-xs.png" alt="Строительная компания ГИК"></a>
+              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo-xs.png" alt="Строительная компания ГИК">
             </div> <!-- /.header_new-info-logo -->
 
             <div class="header_new-info-contacts">
@@ -68,7 +68,7 @@
                 <?php else : ?>
 
                   <p><span>8 800 </span>250 83 38</p>
-                  <p><span>8 861 </span>203 38 38</p>
+
 
                 <?php endif; ?>
 
@@ -104,7 +104,7 @@
               <!-- nav-header -->
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle xs-menu-toggle" data-toggle="collapse" data-target="#main-menu">
-                  <i class="fa fa-bars fa-2x"></i>
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/nav/menu_icon.png" alt="Меню">
                 </button>
               </div>
               <!-- /nav-header -->

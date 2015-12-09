@@ -50,7 +50,7 @@
         <div class="clearfix"></div>
       </section>
 
-      <?php get_template_part('content', 'pagination'); //шаблон пагинации ?>
+      <?php include(TEMPLATEPATH . '/template-parts/pagination/content-pagination.php'); ?>
 
     </div>
   </section>

@@ -9,7 +9,7 @@
         $query_partners = new WP_Query($partners);
         while ($query_partners->have_posts()) : $query_partners->the_post(); ?>
 
-          <img src="<?php echo get_field('partner_logo'); ?>" alt="<?php echo get_field('partner_title'); ?>" title="<?php echo get_field('partner_title'); ?>">
+          <img class="lazyOwl" data-src="<?php echo get_field('partner_logo'); ?>" src="<?php echo get_field('partner_logo'); ?>" alt="<?php echo get_field('partner_title'); ?>" title="<?php echo get_field('partner_title'); ?>">
 
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
