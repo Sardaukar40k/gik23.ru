@@ -30,7 +30,10 @@ gulp.task('sass', function () {
 
 /* --- Сборка файла main.js --- */
 gulp.task('scripts', function () {
-  gulp.src('src/js/*.js')
+  gulp.src([
+      'libs/bootstrap/dist/js/bootstrap.min.js',
+      'libs/owl-carousel/owl-carousel/owl.carousel.min.js',
+      'src/js/*.js'])
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./'))

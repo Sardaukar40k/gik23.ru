@@ -71,7 +71,8 @@
       <!-- start: Отзывы -->
       <div class="row">
       <section class="comments sections-style">
-          <h2 class="sections-h2 text-center">Нашу надежность подтверждают наши клиенты</h2>
+          <h2 class="sections-h2 text-center">Отзывы клиентов</h2>
+        <div class="clearfix"></div>
 
           <?php
           $reviews = array(

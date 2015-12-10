@@ -7,7 +7,9 @@
 
   $args = array(
       'post_type' => 'headers',
-      'post_per_page' => '-1'
+      'post_per_page' => '-1',
+      'orderby' => 'menu_order',
+      'order' => 'ASC',
   );
 
   $banners = new WP_Query($args);

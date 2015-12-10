@@ -52,11 +52,6 @@
 <!-- start: скрипты -->
 <?php wp_footer(); ?>
 
-<!-- Библиотеки: js -->
-  <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/libs/owl-carousel/owl-carousel/owl.carousel.min.js"></script>
-<!-- /Библиотеки: js -->
-
 <!-- Основной скрипт -->
   <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/main.js"></script>
 <!-- /Основной скрипт -->
