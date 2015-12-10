@@ -25,7 +25,9 @@
 
         <div class="latest-news-content">
 
-          <div class="post-info"><time class="date-time" itemprop="datePublished" datetime="<?php the_time('c'); ?>"><i class="fa fa-clock-o"></i> <?php the_time('j F Y'); ?>,  <?php the_time(); ?></time></div>
+          <div class="post-info">
+            <time class="date-time" itemprop="datePublished" datetime="<?php the_time('c'); ?>"><?php the_time('j F Y'); ?>,  <?php the_time(); ?></time>
+          </div>
 
           <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 

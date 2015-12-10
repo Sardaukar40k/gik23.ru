@@ -25,7 +25,9 @@ while ($query->have_posts()) : $query->the_post(); ?>
 
       <div class="latest-news-content">
 
-        <div class="post-info"><time class="date-time" itemprop="datePublished" datetime="<?php the_time('c'); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/news/time_icon.png" alt="Время публикации записи"> <?php the_time('j F Y'); ?>,  <?php the_time(); ?></time></div>
+        <div class="post-info">
+          <time class="date-time" itemprop="datePublished" datetime="<?php the_time('c'); ?>"><?php the_time('j F Y'); ?>,  <?php the_time(); ?></time>
+        </div>
 
         <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 

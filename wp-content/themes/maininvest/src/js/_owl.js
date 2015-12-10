@@ -82,9 +82,12 @@ $(document).ready(function() {
     itemsTablet : [600, 1],
     itemsMobile : [480, 1],
     navigation: true,
-    navigationText: [
-      "<img src='http://gik23.ru/main/wp-content/uploads/2015/06/prev.png' class='control-img'>",
-      "<img src='http://gik23.ru/main/wp-content/uploads/2015/06/next.png' class='control-img'>"
+    navigationText  : [
+
+      "<img src='http://gik23.ru/main/wp-content/uploads/2015/06/prev.png' class='control-img' alt='Предыдущий слайд'>",
+
+      "<img src='http://gik23.ru/main/wp-content/uploads/2015/06/next.png' class='control-img' alt='Следующий слайд'>"
+
     ]
   });
   $(".next-partner").click(function(){
@@ -95,3 +98,4 @@ $(document).ready(function() {
   });
 
 });
+

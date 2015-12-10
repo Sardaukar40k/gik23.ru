@@ -327,7 +327,7 @@
     margin-top: -30px;
     @include media-query($content-width/2) {
       width: 100%;
-      margin: 20px auto 20px;
+      margin: 0 auto 20px;
     }
   }
   &_bottom {

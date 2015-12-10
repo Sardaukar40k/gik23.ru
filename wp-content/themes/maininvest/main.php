@@ -6,7 +6,7 @@
 
   <!-- start: Баннеры -->
   <div class="row">
-    <?php include(TEMPLATEPATH . '/template-parts/banners/main-page-banner.php'); ?>
+    <?php include(TEMPLATEPATH . '/template-parts/banners/banner_main.php'); ?>
   </div>
   <!-- end: Баннеры -->
 
